@@ -1,0 +1,47 @@
+﻿<Window x:Class="Part_Generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Part_Generator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="633.14">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="cbType" Grid.Row="0" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="cbType_SelectionChanged"/>
+        <ComboBox x:Name="cbSize" Grid.Row="1" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="cbSize_SelectionChanged"/>
+        <ComboBox x:Name="cbHand" Grid.Row="2" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="cbHand_SelectionChanged"/>
+        <ComboBox x:Name="cbDuty" Grid.Row="3" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="cbDuty_SelectionChanged"/>
+        <ComboBox x:Name="cbMachType" Grid.Row="4" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="cbMachType_SelectionChanged"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top">Type</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top">Size</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top">Hand</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top">Duty</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top">Machining Type</TextBlock>
+
+        <ComboBox x:Name="cbGroup" Grid.Row="0" Grid.Column="1" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="cbGroup_SelectionChanged"></ComboBox>
+        <TextBlock Grid.Row="0" Grid.Column="1" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top">Group</TextBlock>
+        <TextBox x:Name="tbPartNumber" Grid.Row="1" Grid.Column="1" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top">Part Number</TextBlock>
+        <ScrollViewer Grid.Row="0" Grid.Column="2" Grid.RowSpan="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
+            <StackPanel x:Name="spAtts" ></StackPanel>
+                </ScrollViewer>
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Margin="5" Click="Button_Click_1" >Generate Drawing</Button>
+        <Button Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Click="Button_Click"> Run </Button>
+        <TextBox x:Name="tbResults" AcceptsReturn="True" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Margin="5"></TextBox>
+
+    </Grid>
+</Window>

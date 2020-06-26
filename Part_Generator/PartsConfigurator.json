@@ -1,0 +1,641 @@
+[
+  {
+    "GroupName": "ABQ-210NR-ND",
+    "Type": "QUAD",
+    "Size": "215",
+    "Hand": "RH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "\\rotork.co.uk\files\\US-HOUSTON\\ENGINEERING\\Gears\\Aplications\\ABPartsGen\\Temlpate\\AB210RHNDD",
+      "GearLine": "AB",
+      "GearSize": "210",
+      "GearHand": "RH",
+      "PartNumber": "AB-00312-R-1",
+      "PilotHoleDia": 10.4,
+      "MaxDia": 36,
+      "Height": 51.5
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "54"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  },
+  {
+    "GroupName": "ABQ-210NL-ND",
+    "Type": "QUAD",
+    "Size": "215",
+    "Hand": "LH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "\\rotork.co.uk\files\\US-HOUSTON\\ENGINEERING\\Gears\\Aplications\\ABPartsGen\\Temlpate\\AB210LHNDD",
+      "GearLine": "AB",
+      "GearSize": "210",
+      "GearHand": "LH",
+      "PartNumber": "AB-00312-L-1",
+      "PilotHoleDia": 10.4,
+      "MaxDia": 36,
+      "Height": 51.5
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "54"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  },  
+  {
+    "GroupName": "ABQ-550NL-ND",
+    "Type": "QUAD",
+    "Size": "550",
+    "Hand": "LH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "\\rotork.co.uk\files\\US-HOUSTON\\ENGINEERING\\Gears\\Aplications\\ABPartsGen\\Temlpate\\AB550LHNDD",
+      "GearLine": "AB",
+      "GearSize": "550",
+      "GearHand": "LH",
+      "PartNumber": "44BZ200000000",
+      "PilotHoleDia": 16.0,
+      "MaxDia": 50,
+      "Height": 74.0
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "54"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  },
+  {
+    "GroupName": "ABQ-210NRNDC",
+    "Type": "QUAD",
+    "Size": "215",
+    "Hand": "RH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "",
+      "GearLine": "",
+      "GearSize": "",
+      "GearHand": "",
+      "PartNumber": "",
+      "PilotHoleDia": 0,
+      "MaxDia": 0,
+      "Height": 0
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "54"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  },
+  {
+    "GroupName": "ABQ-880R-ND",
+    "Type": "QUAD",
+    "Size": "880",
+    "Hand": "RH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "",
+      "GearLine": "",
+      "GearSize": "",
+      "GearHand": "",
+      "PartNumber": "",
+      "PilotHoleDia": 0,
+      "MaxDia": 0,
+      "Height": 0
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "54"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  },
+  {
+    "GroupName": "ABQ-1250L-ND",
+    "Type": "QUAD",
+    "Size": "1250",
+    "Hand": "LH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "\\rotork.co.uk\files\\US-HOUSTON\\ENGINEERING\\Gears\\Aplications\\ABPartsGen\\Temlpate\\AB1250LHNDD",
+      "GearLine": "AB",
+      "GearSize": 1250,
+      "GearHand": "LH",
+      "PartNumber": "44DZ200000000",
+      "PilotHoleDia": 20,
+      "MaxDia": 74,
+      "Height": 85
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "91"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  },
+  {
+    "GroupName": "ABQ-1250R-ND",
+    "Type": "QUAD",
+    "Size": "1250",
+    "Hand": "RH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "\\rotork.co.uk\files\\US-HOUSTON\\ENGINEERING\\Gears\\Aplications\\ABPartsGen\\Temlpate\\AB1250RHNDD",
+      "GearLine": "AB",
+      "GearSize": 1250,
+      "GearHand": "RH",
+      "PartNumber": "47DZ200000000",
+      "PilotHoleDia": 20,
+      "MaxDia": 74,
+      "Height": 84
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "91"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  },
+  {
+    "GroupName": "ABQ-1950L-ND",
+    "Type": "QUAD",
+    "Size": "1950",
+    "Hand": "LH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "",
+      "GearLine": "",
+      "GearSize": "",
+      "GearHand": "",
+      "PartNumber": "",
+      "PilotHoleDia": 0,
+      "MaxDia": 0,
+      "Height": 0
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "111"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  },
+  {
+    "GroupName": "ABQ-1950R-ND",
+    "Type": "QUAD",
+    "Size": "1950",
+    "Hand": "RH",
+    "Duty": "N",
+    "Mach_Type": "DD",
+    "MTMS_Item": "003",
+    "MTMS_Stage": "10",
+    "Model": "AB",
+    "SolidEdgePart": {
+      "FilePath": "",
+      "GearLine": "",
+      "GearSize": "",
+      "GearHand": "",
+      "PartNumber": "",
+      "PilotHoleDia": 0,
+      "MaxDia": 0,
+      "Height": 0
+    },
+    "Default_attributes": [
+      {
+        "Att_Name": "DDACMAX",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDACMIN",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDAFLATS",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "DDROUND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": ""
+      },
+      {
+        "Att_Name": "QDRMAT",
+        "intType": 3,
+        "Att_Type": 1,
+        "Default_Value": "STD"
+      },
+      {
+        "Att_Name": "STEMH",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "111"
+      },
+      {
+        "Att_Name": "BCHDP",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      },
+      {
+        "Att_Name": "BCHRND",
+        "intType": 3,
+        "Att_Type": 8,
+        "Default_Value": "9999"
+      }
+    ]
+  }
+]
