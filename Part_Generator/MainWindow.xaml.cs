@@ -190,6 +190,7 @@ namespace Part_Generator
             TItem TagItem = ((TItem)cbGroup.SelectedItem);
             //MessageBox.Show(TagItem.Default_attributes[0].Default_Value);
             mTMSLibrary.Screens m = new mTMSLibrary.Screens("72");
+            tbResults.Text += TagItem.AddToMTMS(m, tbPartNumber.Text);
             tbResults.Text += TagItem.AddToConfigurator(m, tbPartNumber.Text)+ "\n";
             foreach (defualtAtts da in TagItem.Default_attributes)
             {
@@ -197,12 +198,13 @@ namespace Part_Generator
             }
             m.Close();
             m = new mTMSLibrary.Screens("13");
+            tbResults.Text += TagItem.AddToMTMS(m, tbPartNumber.Text);
             tbResults.Text += TagItem.AddToConfigurator(m, tbPartNumber.Text) + "\n";
             foreach (defualtAtts da in TagItem.Default_attributes)
             {
                 tbResults.Text += da.MCO61(m, TagItem, tbPartNumber.Text) + "\n";
             }
-
+            m.Close();
 
         }
 
@@ -330,6 +332,21 @@ namespace Part_Generator
         public string AddToConfigurator(mTMSLibrary.Screens m,  string Part_Number)
         {
             return (string)m.MCO52(Part_Number,Model,GroupName,1,MTMS_Stage,MTMS_Item);
+
+        }
+        public string AddToMTMS(mTMSLibrary.Screens m, string Part_Number)
+        {
+            string desc = Type + ", " + Model + Size + " ";
+            switch (Mach_Type)
+            {
+                case "DD":
+                    desc += "DD " + GetAttByName("DDAFLATS").Default_Value + " X" + GetAttByName("DDROUND").Default_Value;
+                    break;
+                default:
+                    break;
+            }
+            return (string)m.MPD11(Part_Number,"A",desc,desc,"GB","150","","","M","","","","",Model,Size) + "/n" +
+                (string)m.MPD40(Part_Number, 1, SolidEdgePart.PartNumber,1,"","");
 
         }
         public override string ToString()

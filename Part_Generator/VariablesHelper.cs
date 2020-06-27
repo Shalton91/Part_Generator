@@ -187,6 +187,6 @@ class VariablesHelper
     }
     public bool IsH11(int Nom, int Min, int Max)
     {
-
+        return false;
     }
 }
