@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
+using System.Windows.Controls;
 
 class VariablesHelper
 {
@@ -117,6 +119,45 @@ class VariablesHelper
             }
         }
     }
+    public static SolidEdgeFrameworkSupport.Dimension GetDimensions(SolidEdgeFramework.SolidEdgeDocument document,string DimName)
+    {
+        SolidEdgeFramework.Variables variables = null;
+        SolidEdgeFramework.VariableList variableList = null;
+        SolidEdgeFrameworkSupport.Dimension dimension = null;
+
+        if (document == null) throw new ArgumentNullException("document");
+
+        // Get a reference to the Variables collection.
+        variables = (SolidEdgeFramework.Variables)document.Variables;
+
+        // Get a reference to the variablelist.
+        variableList = (SolidEdgeFramework.VariableList)variables.Query(
+            pFindCriterium: "*",
+            NamedBy: SolidEdgeConstants.VariableNameBy.seVariableNameByBoth,
+            VarType: SolidEdgeConstants.VariableVarType.SeVariableVarTypeBoth);
+
+        // Process variables.
+        foreach (var variableListItem in variableList.OfType<object>())
+        {
+            // Not used in this sample but a good example of how to get the runtime type.
+            var variableListItemType = SolidEdgeCommunity.Runtime.InteropServices.ComObject.GetType(variableListItem);
+
+            // Use helper class to get the object type.
+            var objectType = SolidEdgeCommunity.Runtime.InteropServices.ComObject.GetPropertyValue<SolidEdgeFramework.ObjectType>(variableListItem, "Type", (SolidEdgeFramework.ObjectType)0);
+
+            //Process the specific variable item type.
+
+            if (objectType == SolidEdgeFramework.ObjectType.igDimension)
+            {
+                dimension = (SolidEdgeFrameworkSupport.Dimension)variableListItem;
+                if (dimension.DisplayName == DimName)
+                {
+                    return dimension;
+                }
+            }
+        }
+        return null;
+    }
     public static void UpdatePrperties(SolidEdgeFramework.SolidEdgeDocument document, Dictionary<string, string> PropName)
     {
         var propertySets = (SolidEdgeFramework.PropertySets)document.Properties;
@@ -185,7 +226,22 @@ class VariablesHelper
             SolidEdgeCommunity.OleMessageFilter.Unregister();
         }
     }
-    public double[] IsoTolerance(double Nom, string IsoTol)
+    
+    public static string GetIso(double nom,double min, double max)
+    {
+        List<string> ISO = new List<string> { "H11", "H9", "H8", "H12" };
+        foreach (string tol in ISO)
+        {
+            var hold = VariablesHelper.IsoTolerance(nom, tol);
+            if (hold[0] == min && hold[1] == max)
+            {
+                return tol;
+            }
+        }
+        return "NonStd";
+    }
+    
+    public static double[] IsoTolerance(double Nom, string IsoTol)
     {
         //Some Tolerances use the same tolerance for different bands
         //Use the below template and delete the overlap to reduce computations
@@ -216,33 +272,64 @@ class VariablesHelper
        
         switch(IsoTol)
         {
+            case "H8":
+                if (Nom > 0.0 && Nom <= 3.0) { max += 0.014; }
+                else if (Nom > 3.0 && Nom <= 6.0) { max += 0.018; }
+                else if (Nom > 6.0 && Nom <= 10.0) { max += 0.022; }
+                else if (Nom > 10.0 && Nom <= 18.0) { max += 0.027; }
+                else if (Nom > 18.0 && Nom <= 30.0) { max += 0.033; }
+                else if (Nom > 30.0 && Nom <= 50.0) { max += 0.039; }
+                else if (Nom > 50.0 && Nom <= 80.0) { max += 0.046; }
+                else if (Nom > 80.0 && Nom <= 120.0) { max += 0.054; }
+                else if (Nom > 120.0 && Nom <= 180.0) { max += 0.063; }
+                else if (Nom > 180.0 && Nom <= 250.0) { max += 0.072; }
+                else if (Nom > 250.0 && Nom <= 315.0) { max += 0.081; }
+                else if (Nom > 315.0 && Nom <= 400.0) { max += 0.089; }
+                break;
+            case "H9":
+                if (Nom > 0.0 && Nom <= 3.0) { max += 0.025; }
+                else if (Nom > 3.0 && Nom <= 6.0) { max += 0.030; }
+                else if (Nom > 6.0 && Nom <= 10.0) { max += 0.036; }
+                else if (Nom > 10.0 && Nom <= 18.0) { max += 0.043; }
+                else if (Nom > 18.0 && Nom <= 30.0) { max += 0.052; }
+                else if (Nom > 30.0 && Nom <= 50.0) { max += 0.062; }
+                else if (Nom > 50.0 && Nom <= 80.0) { max += 0.074; }
+                else if (Nom > 80.0 && Nom <= 120.0) { max += 0.087; }
+                else if (Nom > 120.0 && Nom <= 180.0) { max += 0.10; }
+                else if (Nom > 180.0 && Nom <= 250.0) { max += 0.115; }
+                else if (Nom > 250.0 && Nom <= 315.0) { max += 0.13; }
+                else if (Nom > 315.0 && Nom <= 400.0) { max += 0.14; }
+                break;
             case "H11":
-            if(Nom>0.0 && Nom <= 3.0){max  += 0.06;}
-            else if (Nom>3.0 && Nom <= 6.0){max += 0.075;}
-            else if (Nom>6.0 && Nom <= 10.0){max += 0.09;}
-            else if (Nom>10.0 && Nom <= 18.0){max += 0.11;}
-            else if (Nom>18.0 && Nom <= 30.0){max += 0.13;}
-            else if (Nom>30.0 && Nom <= 50.0){max += 0.16;}
-            else if (Nom>50.0 && Nom <= 80.0){max += 0.19;}
-            else if (Nom>80.0 && Nom <= 120.0){max += 0.22;}
-            else if (Nom>120.0 && Nom <= 180.0){max += 0.25;}
-            else if (Nom>180.0 && Nom <= 250.0){max += 0.29;}
-            else if (Nom>250.0 && Nom <= 315.0){max += 0.32;}
-            else if (Nom>315.0 && Nom <= 400.0){max += 0.36;}
-            break;
+                if (Nom > 0.0 && Nom <= 3.0) { max += 0.06; }
+                else if (Nom > 3.0 && Nom <= 6.0) { max += 0.075; }
+                else if (Nom > 6.0 && Nom <= 10.0) { max += 0.09; }
+                else if (Nom > 10.0 && Nom <= 18.0) { max += 0.11; }
+                else if (Nom > 18.0 && Nom <= 30.0) { max += 0.13; }
+                else if (Nom > 30.0 && Nom <= 50.0) { max += 0.16; }
+                else if (Nom > 50.0 && Nom <= 80.0) { max += 0.19; }
+                else if (Nom > 80.0 && Nom <= 120.0) { max += 0.22; }
+                else if (Nom > 120.0 && Nom <= 180.0) { max += 0.25; }
+                else if (Nom > 180.0 && Nom <= 250.0) { max += 0.29; }
+                else if (Nom > 250.0 && Nom <= 315.0) { max += 0.32; }
+                else if (Nom > 315.0 && Nom <= 400.0) { max += 0.36; }
+                break;
             case "H12":
-            if(Nom>0.0 && Nom <= 3.0){max  += 0.1;}
-            else if (Nom>3.0 && Nom <= 6.0){max += 0.12;}
-            else if (Nom>6.0 && Nom <= 10.0){max += 0.15;}
-            else if (Nom>10.0 && Nom <= 18.0){max += 0.18;}
-            else if (Nom>18.0 && Nom <= 30.0){max += 0.21;}
-            else if (Nom>30.0 && Nom <= 50.0){max += 0.25;}
-            else if (Nom>50.0 && Nom <= 80.0){max += 0.30;}
-            else if (Nom>80.0 && Nom <= 120.0){max += 0.35;}
-            else if (Nom>120.0 && Nom <= 180.0){max += 0.40;}
-            break;
+                if (Nom > 0.0 && Nom <= 3.0) { max += 0.1; }
+                else if (Nom > 3.0 && Nom <= 6.0) { max += 0.12; }
+                else if (Nom > 6.0 && Nom <= 10.0) { max += 0.15; }
+                else if (Nom > 10.0 && Nom <= 18.0) { max += 0.18; }
+                else if (Nom > 18.0 && Nom <= 30.0) { max += 0.21; }
+                else if (Nom > 30.0 && Nom <= 50.0) { max += 0.25; }
+                else if (Nom > 50.0 && Nom <= 80.0) { max += 0.30; }
+                else if (Nom > 80.0 && Nom <= 120.0) { max += 0.35; }
+                else if (Nom > 120.0 && Nom <= 180.0) { max += 0.40; }
+                else if (Nom > 180.0 && Nom <= 250.0) { max += 0.46; }
+                else if (Nom > 250.0 && Nom <= 315.0) { max += 0.52; }
+                else if (Nom > 315.0 && Nom <= 400.0) { max += 0.57; }
+                break;
         }
-        double[] OutPut = new double[min,max];
+        double[] OutPut = new double[]{ min, max };
 
 
 

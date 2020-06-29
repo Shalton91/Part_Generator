@@ -309,8 +309,27 @@ namespace Part_Generator
             m.Item(1).ChangeSource(@"C:\myloadpoint\" + tempname + ".par");
             //update draft's views to show new linked part file
             VariablesHelper.UpdateDrawingViews(draftDocument);
+            UpdateTolerance(VariablesHelper.GetDimensions((SolidEdgeFramework.SolidEdgeDocument)draftDocument, "DDAFlats"),
+                AF,
+                double.Parse( TagItem.GetAttByName("DDAFMIN").Default_Value),
+                double.Parse( TagItem.GetAttByName("DDAFMAX").Default_Value));
             //save draft file
             draftDocument.SaveAs(@"C:\myloadpoint\" + tempname + ".dft");
+        }
+        public void UpdateTolerance(SolidEdgeFrameworkSupport.Dimension dim, double nom,double min, double max) 
+        {
+            string tol = VariablesHelper.GetIso(nom, min, max);
+            switch (tol)
+            {
+                case "NonStd":
+                    dim.PrimaryUpperTolerance = (max - nom).ToString();
+                    dim.PrimaryLowerTolerance = (min - nom).ToString();
+
+                    break;
+                default:
+                    dim.ShaftClassString = tol; 
+                    break;
+            }
         }
     }
 
