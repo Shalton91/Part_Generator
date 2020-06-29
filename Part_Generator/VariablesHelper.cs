@@ -185,8 +185,67 @@ class VariablesHelper
             SolidEdgeCommunity.OleMessageFilter.Unregister();
         }
     }
-    public bool IsH11(int Nom, int Min, int Max)
+    public double[] IsoTolerance(double Nom, string IsoTol)
     {
-        return false;
+        //Some Tolerances use the same tolerance for different bands
+        //Use the below template and delete the overlap to reduce computations
+        //    if(Nom>0.0 && Nom <= 3.0){max  += ?.??}
+        //    else if (Nom>3.0 && Nom <= 6.0){max += ?.??;}
+        //    else if (Nom>6.0 && Nom <= 10.0){max += ?.??;}
+        //    else if (Nom>10.0 && Nom <= 18.0){max += ?.??;}
+        //    else if (Nom>18.0 && Nom <= 30.0){max += ?.??;}
+        //    else if (Nom>30.0 && Nom <= 40.0){max += ?.??;}
+        //    else if (Nom>40.0 && Nom <= 50.0){max += ?.??;}
+        //    else if (Nom>50.0 && Nom <= 65.0){max += ?.??;}
+        //    else if (Nom>65.0 && Nom <= 80.0){max += ?.??;}
+        //    else if (Nom>80.0 && Nom <= 100.0){max += ?.??;}
+        //    else if (Nom>100.0 && Nom <= 120.0){max += ?.??;}
+        //    else if (Nom>120.0 && Nom <= 140.0){max += ?.??;}
+        //    else if (Nom>140.0 && Nom <= 160.0){max += ?.??;}
+        //    else if (Nom>160.0 && Nom <= 180.0){max += ?.??;}
+        //    else if (Nom>180.0 && Nom <= 200.0){max += ?.??;}
+        //    else if (Nom>200.0 && Nom <= 225.0){max += ?.??;}
+        //    else if (Nom>225.0 && Nom <= 250.0){max += ?.??;}
+        //    else if (Nom>250.0 && Nom <= 280.0){max += ?.??;}
+        //    else if (Nom>280.0 && Nom <= 315.0){max += ?.??;}
+        //    else if (Nom>315.0 && Nom <= 355.0){max += ?.??;}
+        //    else if (Nom>355.0 && Nom <= 400.0){max += ?.??;}
+
+        double min = Nom;
+        double max = Nom;
+       
+        switch(IsoTol)
+        {
+            case "H11":
+            if(Nom>0.0 && Nom <= 3.0){max  += 0.06;}
+            else if (Nom>3.0 && Nom <= 6.0){max += 0.075;}
+            else if (Nom>6.0 && Nom <= 10.0){max += 0.09;}
+            else if (Nom>10.0 && Nom <= 18.0){max += 0.11;}
+            else if (Nom>18.0 && Nom <= 30.0){max += 0.13;}
+            else if (Nom>30.0 && Nom <= 50.0){max += 0.16;}
+            else if (Nom>50.0 && Nom <= 80.0){max += 0.19;}
+            else if (Nom>80.0 && Nom <= 120.0){max += 0.22;}
+            else if (Nom>120.0 && Nom <= 180.0){max += 0.25;}
+            else if (Nom>180.0 && Nom <= 250.0){max += 0.29;}
+            else if (Nom>250.0 && Nom <= 315.0){max += 0.32;}
+            else if (Nom>315.0 && Nom <= 400.0){max += 0.36;}
+            break;
+            case "H12":
+            if(Nom>0.0 && Nom <= 3.0){max  += 0.1;}
+            else if (Nom>3.0 && Nom <= 6.0){max += 0.12;}
+            else if (Nom>6.0 && Nom <= 10.0){max += 0.15;}
+            else if (Nom>10.0 && Nom <= 18.0){max += 0.18;}
+            else if (Nom>18.0 && Nom <= 30.0){max += 0.21;}
+            else if (Nom>30.0 && Nom <= 50.0){max += 0.25;}
+            else if (Nom>50.0 && Nom <= 80.0){max += 0.30;}
+            else if (Nom>80.0 && Nom <= 120.0){max += 0.35;}
+            else if (Nom>120.0 && Nom <= 180.0){max += 0.40;}
+            break;
+        }
+        double[] OutPut = new double[min,max];
+
+
+
+        return OutPut;
     }
 }
