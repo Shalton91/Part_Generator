@@ -150,10 +150,15 @@ class VariablesHelper
             if (objectType == SolidEdgeFramework.ObjectType.igDimension)
             {
                 dimension = (SolidEdgeFrameworkSupport.Dimension)variableListItem;
-                if (dimension.DisplayName == DimName)
+                try
                 {
-                    return dimension;
+                    if (dimension.DisplayName == DimName)
+                    {
+                        Console.WriteLine("Returned " + dimension.DisplayName);
+                        return dimension;
+                    }
                 }
+                catch { }
             }
         }
         return null;

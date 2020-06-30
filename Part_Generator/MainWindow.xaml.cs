@@ -164,14 +164,10 @@ namespace Part_Generator
                     t.Mach_Type == cbMachType.SelectedItem.ToString())
                 {
                     options.Add(t);
-
-
                 }
-
             }
             try
             {
-
             options.Sort();
             }
             catch { }
@@ -274,6 +270,9 @@ namespace Part_Generator
             double DDround = double.Parse(TagItem.GetAttByName("DDROUND").Default_Value) / 1000.0;
             double CboreDia = DDround + .0002;
             double hold = Math.Sqrt(Math.Pow(DDround, 2.0) - Math.Pow(AF, 2.0)) + drillDia;
+            double AFMin = double.Parse(TagItem.GetAttByName("DDACMIN").Default_Value);
+            double AFMax = double.Parse(TagItem.GetAttByName("DDACMAX").Default_Value);
+
 
             if (hold > DDround) { DDround = hold; }
 
@@ -309,10 +308,8 @@ namespace Part_Generator
             m.Item(1).ChangeSource(@"C:\myloadpoint\" + tempname + ".par");
             //update draft's views to show new linked part file
             VariablesHelper.UpdateDrawingViews(draftDocument);
-            UpdateTolerance(VariablesHelper.GetDimensions((SolidEdgeFramework.SolidEdgeDocument)draftDocument, "DDAFlats"),
-                AF,
-                double.Parse( TagItem.GetAttByName("DDAFMIN").Default_Value),
-                double.Parse( TagItem.GetAttByName("DDAFMAX").Default_Value));
+            var d = VariablesHelper.GetDimensions((SolidEdgeFramework.SolidEdgeDocument)draftDocument, "DDAFlats");
+            UpdateTolerance(d,AF,AFMin,AFMax);
             //save draft file
             draftDocument.SaveAs(@"C:\myloadpoint\" + tempname + ".dft");
         }
@@ -322,11 +319,12 @@ namespace Part_Generator
             switch (tol)
             {
                 case "NonStd":
+                    dim.DisplayType = SolidEdgeFrameworkSupport.DimDispTypeConstants.igDimDisplayTypeUnitTolerance;
                     dim.PrimaryUpperTolerance = (max - nom).ToString();
                     dim.PrimaryLowerTolerance = (min - nom).ToString();
-
                     break;
                 default:
+                    dim.DisplayType = SolidEdgeFrameworkSupport.DimDispTypeConstants.igDimDisplayTypeClassfit;
                     dim.ShaftClassString = tol; 
                     break;
             }
