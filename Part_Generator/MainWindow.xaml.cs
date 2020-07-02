@@ -202,44 +202,50 @@ namespace Part_Generator
             }
             m.Close();
 
-        }
-
-        
+        }        
 
         private void cbGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            TItem T = (TItem)cbGroup.SelectedItem ;
+            TItem T = (TItem)cbGroup.SelectedItem;
+            try { btnSolidEdge.IsEnabled = (!string.IsNullOrWhiteSpace(T.SolidEdgePart.FilePath)); } catch { btnSolidEdge.IsEnabled = false; }
             spAtts.Children.Clear();
-
-
-            foreach (defualtAtts da in T.Default_attributes)
+            try
             {
-                TextBlock tbl = new TextBlock();
-                tbl.Text = da.Att_Name;
-                tbl.MinWidth = 75;
-                TextBox tb = new TextBox();
-                tb.Text = da.Default_Value;
-                tb.Tag = da;
-                tb.TextChanged += Tb_TextChanged;
+                foreach (defualtAtts da in T.Default_attributes)
+                {
+                    TextBlock tbl = new TextBlock();
+                    tbl.Text = da.Att_Name;
+                    tbl.MinWidth = 75;
+                    TextBox tb = new TextBox();
+                    tb.Text = da.Default_Value;
+                    tb.Tag = da;
+                    tb.TextChanged += Tb_TextChanged;
 
 
-                DockPanel sp = new DockPanel();
-                sp.Margin = new Thickness(5);
-                sp.Children.Add(tbl);
-                sp.Children.Add(tb);
-                spAtts.Children.Add(sp);
+                    DockPanel sp = new DockPanel();
+                    sp.Margin = new Thickness(5);
+                    sp.Children.Add(tbl);
+                    sp.Children.Add(tb);
+                    spAtts.Children.Add(sp);
+                }
             }
+            catch
+            {
 
-            return;
+            }
         }
+
         public string RandString()
         {
             DateTime dt = DateTime.Now;
             return dt.Year.ToString() + dt.Month.ToString() + dt.Day.ToString() + dt.Hour.ToString() + dt.Minute.ToString() + dt.Second.ToString() + dt.Millisecond.ToString();
 
         }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
+
             TItem TagItem = ((TItem)cbGroup.SelectedItem);
             Console.WriteLine(TagItem.SolidEdgePart.FilePath);
             if (!string.IsNullOrEmpty(TagItem.SolidEdgePart.FilePath))
@@ -253,22 +259,21 @@ namespace Part_Generator
                         break;
                     default:
                         MessageBox.Show("This type has not been implemented yet");
+
                         break;
                 }
             }
-
-
         }
 
         public void SolidEdgeDD(TItem TagItem)
         {   //random string for saving the new files         
             string tempname = RandString();
             //Across
-            double AF = double.Parse(TagItem.GetAttByName("DDAFLATS").Default_Value) / 1000.0;
-            double drillDia = Math.Round(AF * 375.0, 0) / 1000.0;
+            double AF = double.Parse(TagItem.GetAttByName("DDAFLATS").Default_Value) ;
+            double drillDia = Math.Round(AF * 0.375, 0) ;
             double depth = AF * 1.5;
-            double DDround = double.Parse(TagItem.GetAttByName("DDROUND").Default_Value) / 1000.0;
-            double CboreDia = DDround + .0002;
+            double DDround = double.Parse(TagItem.GetAttByName("DDROUND").Default_Value) ;
+            double CboreDia = Math.Round( Math.Sqrt( Math.Pow( DDround,2) + Math.Pow(AF,2)) +  .2,0,MidpointRounding.AwayFromZero);
             double hold = Math.Sqrt(Math.Pow(DDround, 2.0) - Math.Pow(AF, 2.0)) + drillDia;
             double AFMin = double.Parse(TagItem.GetAttByName("DDACMIN").Default_Value);
             double AFMax = double.Parse(TagItem.GetAttByName("DDACMAX").Default_Value);
@@ -309,26 +314,11 @@ namespace Part_Generator
             //update draft's views to show new linked part file
             VariablesHelper.UpdateDrawingViews(draftDocument);
             var d = VariablesHelper.GetDimensions((SolidEdgeFramework.SolidEdgeDocument)draftDocument, "DDAFlats");
-            UpdateTolerance(d,AF,AFMin,AFMax);
+            VariablesHelper.UpdateTolerance(d,AF,AFMin,AFMax);
             //save draft file
             draftDocument.SaveAs(@"C:\myloadpoint\" + tempname + ".dft");
         }
-        public void UpdateTolerance(SolidEdgeFrameworkSupport.Dimension dim, double nom,double min, double max) 
-        {
-            string tol = VariablesHelper.GetIso(nom, min, max);
-            switch (tol)
-            {
-                case "NonStd":
-                    dim.DisplayType = SolidEdgeFrameworkSupport.DimDispTypeConstants.igDimDisplayTypeUnitTolerance;
-                    dim.PrimaryUpperTolerance = (max - nom).ToString();
-                    dim.PrimaryLowerTolerance = (min - nom).ToString();
-                    break;
-                default:
-                    dim.DisplayType = SolidEdgeFrameworkSupport.DimDispTypeConstants.igDimDisplayTypeClassfit;
-                    dim.ShaftClassString = tol; 
-                    break;
-            }
-        }
+
     }
 
     public class TItem

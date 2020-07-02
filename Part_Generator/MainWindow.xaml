@@ -39,8 +39,8 @@
         <ScrollViewer Grid.Row="0" Grid.Column="2" Grid.RowSpan="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
             <StackPanel x:Name="spAtts" ></StackPanel>
                 </ScrollViewer>
-        <Button Grid.Row="5" Grid.ColumnSpan="2" Margin="5" Click="Button_Click_1" >Generate Drawing</Button>
-        <Button Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Click="Button_Click"> Run </Button>
+        <Button x:Name="btnSolidEdge" Grid.Row="5" Grid.ColumnSpan="2" Margin="5" Click="Button_Click_1" IsEnabled="False" >Generate Drawing</Button>
+        <Button x:Name="btnmTMS" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Click="Button_Click"> Run </Button>
         <TextBox x:Name="tbResults" AcceptsReturn="True" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Margin="5"></TextBox>
 
     </Grid>

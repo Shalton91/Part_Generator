@@ -112,13 +112,33 @@ class VariablesHelper
                 dimension = (SolidEdgeFrameworkSupport.Dimension)variableListItem;
                 if (DimName.Keys.Contains(dimension.DisplayName))
                 {
-                    dimension.Value = DimName[dimension.DisplayName];
+                    dimension.Value = DimName[dimension.DisplayName]/1000.0;
                     
                 }
 
             }
         }
     }
+
+    public static void UpdateTolerance(SolidEdgeFrameworkSupport.Dimension dim, double nom, double min, double max)
+    {
+        string tol = VariablesHelper.GetIso(nom, min, max);
+        switch (tol)
+        {
+            case "NonStd":
+                dim.DisplayType = SolidEdgeFrameworkSupport.DimDispTypeConstants.igDimDisplayTypeUnitTolerance;
+                Console.WriteLine("Min: {0} Max: {1} Nom: {2}", min.ToString(), max.ToString(), nom.ToString());
+                Console.WriteLine("Upper: {0} Lower: {1}", Math.Round((max - nom), 2).ToString() + " mm", Math.Round((min - nom), 2).ToString() + " mm");
+                dim.PrimaryUpperTolerance = Math.Round((max - nom), 2).ToString();
+                dim.PrimaryLowerTolerance = Math.Round((min - nom), 2).ToString();
+                break;
+            default:
+                dim.DisplayType = SolidEdgeFrameworkSupport.DimDispTypeConstants.igDimDisplayTypeClassPlusMinus;
+                dim.HoleClassString = tol;
+                break;
+        }
+    }
+
     public static SolidEdgeFrameworkSupport.Dimension GetDimensions(SolidEdgeFramework.SolidEdgeDocument document,string DimName)
     {
         SolidEdgeFramework.Variables variables = null;
@@ -163,6 +183,7 @@ class VariablesHelper
         }
         return null;
     }
+
     public static void UpdatePrperties(SolidEdgeFramework.SolidEdgeDocument document, Dictionary<string, string> PropName)
     {
         var propertySets = (SolidEdgeFramework.PropertySets)document.Properties;
@@ -180,6 +201,7 @@ class VariablesHelper
         }
 
     }
+
     public static void UpdateDrawingViews(SolidEdgeDraft.DraftDocument draftDocument)
     {
         SolidEdgeDraft.Sections sections = null;
@@ -240,9 +262,11 @@ class VariablesHelper
             var hold = VariablesHelper.IsoTolerance(nom, tol);
             if (hold[0] == min && hold[1] == max)
             {
+                Console.WriteLine("Tolerance is {0}", tol);
                 return tol;
             }
         }
+        Console.WriteLine("Tolerance is Non-Standard");
         return "NonStd";
     }
     
@@ -334,6 +358,7 @@ class VariablesHelper
                 else if (Nom > 315.0 && Nom <= 400.0) { max += 0.57; }
                 break;
         }
+        Console.WriteLine("Nominal: {0} Min: {1} Max: {2} Tol Name: {3}", Nom, min, max,IsoTol);
         double[] OutPut = new double[]{ min, max };
 
 
