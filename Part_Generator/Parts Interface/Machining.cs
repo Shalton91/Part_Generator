@@ -9,6 +9,7 @@ namespace Part_Generator.Parts_Interface
 {
     static class Machining
     {
+        //creates a name for the new files created. 
         static string RandString()
         {
             DateTime dt = DateTime.Now;
