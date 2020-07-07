@@ -66,7 +66,7 @@ namespace Part_Generator
                 }
 
             }
-            options.Sort();
+            //options.Sort();
 
             cbSize.ItemsSource = options;
             cbSize.SelectedItem = "-";
@@ -264,9 +264,101 @@ namespace Part_Generator
                 }
             }
         }
+        public string inputValidator(TItem TagItem)
+        {
+            string bHold = "";
+            foreach (var t in TagItem.Default_attributes)
+            {
+                if (string.IsNullOrWhiteSpace(t.Default_Value))
+                {
+                    bHold += "Please add a value for " + t.Att_Name + "\n";
+                }
+            }
+            return bHold;
+        }
+        public string DDinputValidator(TItem TagItem)
+        {
+            string bHold = "";
+            var AFNOM = TagItem.GetAttByName("DDAFLATS");
+            var AFMIN = TagItem.GetAttByName("DDACMIN");
+            var AFMAX = TagItem.GetAttByName("DDACMAX");
+            var DDROUND = TagItem.GetAttByName("DDROUND");
 
+           
+
+            Dictionary<defualtAtts, double> Dic = new Dictionary<defualtAtts, double>();
+            Dic.Add(AFNOM, new double());
+            Dic.Add(AFMIN, new double());
+            Dic.Add(AFMAX, new double());
+            Dic.Add(DDROUND, new double());
+
+            //Check for all inputs being Doubles
+            foreach (defualtAtts d in Dic.Keys)
+            {
+                double dout = Dic[d];
+                if (!double.TryParse(d.Default_Value, out dout))
+                {
+                    bHold += d.Att_Name + " needs to be a number\n";
+                    return bHold;
+                }
+                
+            }
+            Dic.Clear();
+            Dic.Add(AFNOM, double.Parse(AFNOM.Default_Value));
+            Dic.Add(AFMIN, double.Parse(AFMIN.Default_Value));
+            Dic.Add(AFMAX, double.Parse(AFMAX.Default_Value));
+            Dic.Add(DDROUND, double.Parse(DDROUND.Default_Value));
+
+            //Check that Min is smaller than Max
+            if (Dic[AFMAX] <= Dic[AFMIN])
+            {
+                bHold += "DD Max is must be greater than DD Min\n";                
+            }
+            //Check that AF is smaller than Round
+            if (Dic[DDROUND] <= Dic[AFNOM])
+            {
+                bHold += "DD Round must be greater than DD across flats\n";
+            }
+            //Check Rounds and Flat are greater than pilot
+            double x = Math.Sqrt((Math.Pow(TagItem.SolidEdgePart.PilotHoleDia, 2) - Math.Pow(Dic[AFNOM], 2)));
+            if (x > Dic[DDROUND]/3)
+            {
+                Console.WriteLine(Dic[DDROUND] + " " + TagItem.SolidEdgePart.PilotHoleDia);
+
+                bHold += "The Pilot bore in the quadrant causes a loss of more than 1/3 of the driving wall\n";
+            }
+            if(TagItem.SolidEdgePart.PilotHoleDia> Dic[DDROUND])
+            {
+                Console.WriteLine(Dic[DDROUND] + " " + TagItem.SolidEdgePart.PilotHoleDia);
+                bHold += "The Pilot Bore (" + TagItem.SolidEdgePart.PilotHoleDia + ") is greater than the DD Round (" + Dic[DDROUND] + ")\n";
+
+            }
+            //Check that CBore will not remove indicator holes
+            double CboreDia = Math.Round(Math.Sqrt(Math.Pow(Dic[DDROUND], 2) + Math.Pow(Dic[AFNOM], 2)) + .2, 0, MidpointRounding.AwayFromZero);
+            if (CboreDia > TagItem.SolidEdgePart.MaxDia)
+            {
+
+                bHold += "Counterbore will interfear with indicator threaded holes\n";
+            }
+
+            return bHold;
+        }
         public void SolidEdgeDD(TItem TagItem)
-        {   //random string for saving the new files         
+        {
+            string bHold = inputValidator(TagItem);
+            if (!string.IsNullOrWhiteSpace(bHold))
+            {
+                MessageBox.Show(bHold);
+                return;
+            }
+            bHold = DDinputValidator(TagItem);
+            if (!string.IsNullOrWhiteSpace(bHold))
+            {
+                MessageBox.Show(bHold);
+                return;
+            }
+
+            //random string for saving the new files         
             string tempname = RandString();
             //Across
             double AF = double.Parse(TagItem.GetAttByName("DDAFLATS").Default_Value) ;
@@ -319,6 +411,10 @@ namespace Part_Generator
             draftDocument.SaveAs(@"C:\myloadpoint\" + tempname + ".dft");
         }
 
+        private void tbPartNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            btnmTMS.IsEnabled = !string.IsNullOrEmpty(tbPartNumber.Text);
+        }
     }
 
     public class TItem
