@@ -201,8 +201,18 @@ namespace Part_Generator
             TItem TagItem = ((TItem)cbGroup.SelectedItem);
             List<string> Co = new List<string>();
             //TODO: add user choice to company selection
-            Co.Add("72");
-            Co.Add("13");
+            if ((bool)ChBCo72.IsChecked)
+            {
+                Co.Add("72");
+            }
+            if ((bool)ChBCo13.IsChecked)
+            {
+                Co.Add("13");
+            }
+            if ((bool)ChBCo81.IsChecked)
+            {
+                Co.Add("81");
+            }
             foreach ( string s in Co)
             {
                 mTMSLibrary.Screens m = new mTMSLibrary.Screens(s);

@@ -18,6 +18,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition Height="auto"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -39,8 +40,18 @@
         <ScrollViewer Grid.Row="0" Grid.Column="2" Grid.RowSpan="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
             <StackPanel x:Name="spAtts" ></StackPanel>
                 </ScrollViewer>
-        <Button x:Name="btnSolidEdge" Grid.Row="5" Grid.ColumnSpan="2" Margin="5" Click="Button_Click_1" IsEnabled="False" >Generate Drawing</Button>
-        <Button x:Name="btnmTMS" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Click="Button_Click" IsEnabled="False"> Run </Button>
+        <Grid Grid.Row="5" Grid.ColumnSpan="2"  HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <CheckBox x:Name="ChBCo13" IsThreeState="True" Grid.Column="0" HorizontalAlignment="Center">Co13</CheckBox>
+            <CheckBox x:Name="ChBCo72" IsThreeState="True" Grid.Column="1" HorizontalAlignment="Center">Co72</CheckBox>
+            <CheckBox x:Name="ChBCo81" IsThreeState="False" Grid.Column="2" HorizontalAlignment="Center">Co81</CheckBox>
+        </Grid>
+        <Button x:Name="btnSolidEdge" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Click="Button_Click_1" IsEnabled="False" >Generate Drawing</Button>
+        <Button x:Name="btnmTMS" Grid.Row="7" Grid.ColumnSpan="2" Margin="5" Click="Button_Click" IsEnabled="False"> Run </Button>
         <TextBox x:Name="tbResults" AcceptsReturn="True" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Margin="5"></TextBox>
 
     </Grid>
