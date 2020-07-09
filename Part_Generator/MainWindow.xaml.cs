@@ -23,16 +23,11 @@ namespace Part_Generator
     public partial class MainWindow : Window
     {
         public List<TItem> Master { get; set; } = new List<TItem>();
-
         public MainWindow()
         {
             InitializeComponent();
-
             Master = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TItem>>(IO.File.ReadAllText(@"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\PartsConfigurator.json"));
-            
-         
             GetCBTypes();
-
         }
 
         public void GetCBTypes()
@@ -50,7 +45,6 @@ namespace Part_Generator
             cbType.ItemsSource = options;
             cbType.SelectedItem = "-";
         }
-
         private void cbType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             List<string> options = new List<string>();
@@ -75,12 +69,10 @@ namespace Part_Generator
             cbDuty.ItemsSource =  null;
             cbMachType.ItemsSource = null;
             }
-
         private void cbSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             List<string> options = new List<string>();
             options.Add("-");
-
             if(cbType.SelectedItem == null || cbSize.SelectedItem == null)
             {
                 return;
@@ -100,10 +92,8 @@ namespace Part_Generator
             cbHand.ItemsSource = options;
             cbHand.SelectedItem = "-";
             cbDuty.ItemsSource =  null;
-            cbMachType.ItemsSource =  null;
-            
+            cbMachType.ItemsSource =  null;            
         }
-
         private void cbHand_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             List<string> options = new List<string>();
@@ -120,14 +110,12 @@ namespace Part_Generator
                         options.Add(t.Duty);
                     }
                 }
-
             }
             options.Sort();
             cbDuty.ItemsSource = options;
             cbDuty.SelectedItem = "-";
             cbMachType.ItemsSource = null;
         }
-
         private void cbDuty_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             List<string> options = new List<string>();
@@ -150,9 +138,7 @@ namespace Part_Generator
             options.Sort();
             cbMachType.ItemsSource = options;
             cbMachType.SelectedItem = "-";
-
         }
-
         private void cbMachType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             List<TItem> options = new List<TItem>();
@@ -174,18 +160,20 @@ namespace Part_Generator
             catch { }
    cbGroup.ItemsSource = options;
         }
-
         private void Tb_TextChanged(object sender, TextChangedEventArgs e)
         {
            TextBox tb = (TextBox)sender;
             defualtAtts da = (defualtAtts)tb.Tag;
             da.Default_Value = tb.Text;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //TODO:Add log files
+
+
+
+            //TODO:Add user selection of site then loop through selected sites
             TItem TagItem = ((TItem)cbGroup.SelectedItem);
-            //MessageBox.Show(TagItem.Default_attributes[0].Default_Value);
             mTMSLibrary.Screens m = new mTMSLibrary.Screens("72");
             tbResults.Text += TagItem.AddToMTMS(m, tbPartNumber.Text);
             tbResults.Text += TagItem.AddToConfigurator(m, tbPartNumber.Text)+ "\n";
@@ -238,8 +226,6 @@ namespace Part_Generator
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
-
             TItem TagItem = ((TItem)cbGroup.SelectedItem);
             Console.WriteLine(TagItem.SolidEdgePart.FilePath);
             if (!string.IsNullOrEmpty(TagItem.SolidEdgePart.FilePath))
