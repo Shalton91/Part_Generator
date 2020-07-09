@@ -6,6 +6,18 @@
         xmlns:local="clr-namespace:Part_Generator"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="633.14">
+    <Window.Resources>
+        <Style x:Name="styleComboBox" TargetType="ComboBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>          
+        </Style>
+        <Style x:Name="styleTextBlock" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontSize" Value="7pt"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -22,25 +34,28 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="cbType" Grid.Row="0" Grid.Column="0" Margin="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" SelectionChanged="cbType_SelectionChanged"/>
-        <ComboBox x:Name="cbSize" Grid.Row="1" Grid.Column="0" Margin="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" SelectionChanged="cbSize_SelectionChanged"/>
-        <ComboBox x:Name="cbHand" Grid.Row="2" Grid.Column="0" Margin="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" SelectionChanged="cbHand_SelectionChanged"/>
-        <ComboBox x:Name="cbDuty" Grid.Row="3" Grid.Column="0" Margin="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" SelectionChanged="cbDuty_SelectionChanged"/>
-        <ComboBox x:Name="cbMachType" Grid.Row="4" Grid.Column="0" Margin="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" SelectionChanged="cbMachType_SelectionChanged"/>
-        <TextBlock Grid.Row="0" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize ="7pt">Type</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize ="7pt">Size</TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize ="7pt">Hand</TextBlock>
-        <TextBlock Grid.Row="3" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize ="7pt">Duty</TextBlock>
-        <TextBlock Grid.Row="4" Grid.Column="0" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize ="7pt">Machining Type</TextBlock>
+        <ComboBox x:Name="cbType" Grid.Row="0" Grid.Column="0" SelectionChanged="cbType_SelectionChanged" />
+        <ComboBox x:Name="cbSize" Grid.Row="1" Grid.Column="0" SelectionChanged="cbSize_SelectionChanged"/>
+        <ComboBox x:Name="cbHand" Grid.Row="2" Grid.Column="0" SelectionChanged="cbHand_SelectionChanged"/>
+        <ComboBox x:Name="cbDuty" Grid.Row="3" Grid.Column="0" SelectionChanged="cbDuty_SelectionChanged"/>
+        <ComboBox x:Name="cbMachType" Grid.Row="4" Grid.Column="0" SelectionChanged="cbMachType_SelectionChanged"/>
+        <ComboBox x:Name="cbGroup" Grid.Row="0" Grid.Column="1" SelectionChanged="cbGroup_SelectionChanged"/>
 
-        <ComboBox x:Name="cbGroup" Grid.Row="0" Grid.Column="1" Margin="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" SelectionChanged="cbGroup_SelectionChanged"></ComboBox>
-        <TextBlock Grid.Row="0" Grid.Column="1" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize ="7pt">Group</TextBlock>
         <TextBox x:Name="tbPartNumber" Grid.Row="1" Grid.Column="1" Margin="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" TextChanged="tbPartNumber_TextChanged"></TextBox>
-        <TextBlock Grid.Row="1" Grid.Column="1" Margin="7" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize ="7pt">Part Number</TextBlock>
+        <TextBox x:Name="tbResults" AcceptsReturn="True" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Margin="5"></TextBox>
+
+        <TextBlock Margin="7" Grid.Row="0" Grid.Column="0">Type</TextBlock>
+        <TextBlock Margin="7" Grid.Row="1" Grid.Column="0">Size</TextBlock>
+        <TextBlock Margin="7" Grid.Row="2" Grid.Column="0">Hand</TextBlock>
+        <TextBlock Margin="7" Grid.Row="3" Grid.Column="0">Duty</TextBlock>
+        <TextBlock Margin="7" Grid.Row="4" Grid.Column="0">Machining Type</TextBlock>
+        <TextBlock Margin="7" Grid.Row="0" Grid.Column="1">Group</TextBlock>
+        <TextBlock Margin="7" Grid.Row="1" Grid.Column="1">Part Number</TextBlock>
+
         <ScrollViewer Grid.Row="0" Grid.Column="2" Grid.RowSpan="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5">
             <StackPanel x:Name="spAtts" ></StackPanel>
                 </ScrollViewer>
-        <Border Grid.Row="5" Grid.ColumnSpan="2" BorderBrush="Gray" BorderThickness="1"  Margin="5"></Border>
+        <Border Grid.Row="5" Grid.ColumnSpan="2" BorderBrush="LightGray" BorderThickness="1"  Margin="5"></Border>
         <Grid Grid.Row="5" Grid.ColumnSpan="2" Margin="10"   HorizontalAlignment="Stretch" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -48,12 +63,11 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <CheckBox x:Name="ChBCo13" IsChecked="True" Grid.Column="0" HorizontalAlignment="Center">Co13</CheckBox>
-            <CheckBox x:Name="ChBCo72" IsChecked="True" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Center">Co72</CheckBox>
+            <CheckBox x:Name="ChBCo72" IsChecked="True" Grid.Column="1" HorizontalAlignment="Center">Co72</CheckBox>
             <CheckBox x:Name="ChBCo81" IsChecked="False" Grid.Column="2" HorizontalAlignment="Center">Co81</CheckBox>
         </Grid>
         <Button x:Name="btnSolidEdge" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Click="Button_Click_1" IsEnabled="False" >Generate Drawing</Button>
         <Button x:Name="btnmTMS" Grid.Row="7" Grid.ColumnSpan="2" Margin="5" Click="Button_Click" IsEnabled="False"> Run </Button>
-        <TextBox x:Name="tbResults" AcceptsReturn="True" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Margin="5"></TextBox>
-
+       
     </Grid>
 </Window>

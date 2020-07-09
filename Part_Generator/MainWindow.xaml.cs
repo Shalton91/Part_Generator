@@ -29,7 +29,9 @@ namespace Part_Generator
         {
             InitializeComponent();
             Master = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TItem>>(IO.File.ReadAllText(@"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\PartsConfigurator.json"));
+
             GetCBTypes();
+           IO.File.WriteAllText(@"C:\Users\sean.halton\Desktop\New folder\hold.json", Newtonsoft.Json.JsonConvert.SerializeObject(Master));
         }
 
         public void GetCBTypes()
@@ -168,28 +170,24 @@ namespace Part_Generator
             defualtAtts da = (defualtAtts)tb.Tag;
             da.Default_Value = tb.Text;
         }
-        private object[] LogFile()
+        private IOFileInterface LogFile()
         {
-            object[] output = new object[1];
-            string FilePath = @"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\LogFiles\MTMSEntry" +
+            
+            string FilePath = @"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\LogFiles\" +
                System.Environment.UserName.ToUpper() +
                Machining.RandString() + ".log";
-            IO.FileStream fs = new IO.FileStream(FilePath, IO.FileMode.OpenOrCreate);
-            IO.StreamWriter sw = new IO.StreamWriter(fs);
-            sw.WriteLine("Date:{0}", DateTime.Now);
-            sw.WriteLine("User:{0}", System.Environment.UserName.ToUpper());
-            sw.WriteLine("*".PadRight(30, '*'));
-            sw.WriteLine("User Inputs");
-            sw.WriteLine("*".PadRight(30, '*'));
-            sw.WriteLine("Input Type: {0}", cbType.Text);
-            sw.WriteLine("Gear Size: {0}", cbSize.Text);
-            sw.WriteLine("Hand: {0}", cbHand.Text);
-            sw.WriteLine("Machining Type: {0}", cbMachType.Text);
-            sw.WriteLine("Duty: {0}", cbDuty.Text);
-            sw.WriteLine("MTMS Group: {0}", cbGroup.Text);
-            sw.WriteLine("*".PadRight(30, '*'));
-            output[0] = fs;
-            output[1] = sw;
+            IOFileInterface output = new IOFileInterface(FilePath);
+            output.sw.WriteLine("Date:{0}", DateTime.Now);
+            output.sw.WriteLine("User:{0}", System.Environment.UserName.ToUpper());
+            output.sw.WriteLine("*".PadRight(30, '*'));
+            output.sw.WriteLine("User Inputs");
+            output.sw.WriteLine("*".PadRight(30, '*'));
+            output.sw.WriteLine("Input Type: {0}", cbType.Text);
+            output.sw.WriteLine("Gear Size: {0}", cbSize.Text);
+            output.sw.WriteLine("Hand: {0}", cbHand.Text);
+            output.sw.WriteLine("Machining Type: {0}", cbMachType.Text);
+            output.sw.WriteLine("Duty: {0}", cbDuty.Text);
+            output.sw.WriteLine("MTMS Group: {0}", cbGroup.Text);
             return output;
 
         }
@@ -197,47 +195,47 @@ namespace Part_Generator
         {
             string hold = "";
             var writing = LogFile();
-            var sw = (IO.StreamWriter)writing[1];
             TItem TagItem = ((TItem)cbGroup.SelectedItem);
             List<string> Co = new List<string>();
             //TODO: add user choice to company selection
+            hold = "Companies selected: ";
             if ((bool)ChBCo72.IsChecked)
             {
+                hold += "Co72;";
                 Co.Add("72");
             }
             if ((bool)ChBCo13.IsChecked)
             {
+                hold += "Co13;";
                 Co.Add("13");
             }
             if ((bool)ChBCo81.IsChecked)
             {
+                hold += "Co81;";
                 Co.Add("81");
             }
+            writing.sw.WriteLine(hold);
+            writing.sw.WriteLine("*".PadRight(30, '*'));
             foreach ( string s in Co)
             {
                 mTMSLibrary.Screens m = new mTMSLibrary.Screens(s);
-                sw.WriteLine("Co" + s + " results:");
-                sw.WriteLine("*".PadRight(30, '*'));
+                writing.sw.WriteLine("Co" + s + " results:");
+                writing.sw.WriteLine("*".PadRight(30, '*'));
                 hold = TagItem.AddToMTMS(m, tbPartNumber.Text);
-                sw.WriteLine(hold);
+                writing.sw.WriteLine(hold);
                 tbResults.Text += hold + "\n";
                 hold = TagItem.AddToConfigurator(m, tbPartNumber.Text);
-                sw.WriteLine(hold);
+                writing.sw.WriteLine(hold);
                 tbResults.Text += hold + "\n";
                 foreach (defualtAtts da in TagItem.Default_attributes)
                 {
                     hold = "attribute: " + da.Att_Name + "; Value: " + da.Default_Value + "; Result: " + da.MCO61(m, TagItem, tbPartNumber.Text);
-                    sw.WriteLine(hold);
+                    writing.sw.WriteLine(hold);
                     tbResults.Text += hold + "\n";
                 }
                 m.Close();
             }
-            sw.Close();
-            IO.FileStream fs = (IO.FileStream)writing[0];
-            fs.Close();
-            
-            
-
+            writing.Close();
         }        
 
         private void cbGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -256,8 +254,6 @@ namespace Part_Generator
                     tb.Text = da.Default_Value;
                     tb.Tag = da;
                     tb.TextChanged += Tb_TextChanged;
-
-
                     DockPanel sp = new DockPanel();
                     sp.Margin = new Thickness(5);
                     sp.Children.Add(tbl);
@@ -365,14 +361,26 @@ namespace Part_Generator
     public class SolidEdgeItem
     {
         public string FilePath { get; set; } = "";
-        public string GearLine { get; set; } = "";
-        public string GearSize { get; set; } = "";
-        public string GearHand { get; set; } = "";
         public string PartNumber { get; set; } = "";
         public double PilotHoleDia { get; set; } = 0.0;
         public double MaxDia { get; set; } = 0.0;
         public double Height { get; set; } = 0.0;
     }
 
+    public class IOFileInterface
+    {
+        public IO.FileStream fs { get; set; }
+        public IO.StreamWriter sw { get; set; }
 
+       public IOFileInterface(string fPath)
+        {
+            fs = new IO.FileStream(fPath, IO.FileMode.OpenOrCreate);
+            sw = new IO.StreamWriter(fs);
+        }
+       public void Close()
+       {
+            sw.Close();
+            fs.Close();
+       }
+    }
 }
