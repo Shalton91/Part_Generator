@@ -29,9 +29,8 @@ namespace Part_Generator
         {
             InitializeComponent();
             Master = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TItem>>(IO.File.ReadAllText(@"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\PartsConfigurator.json"));
-
             GetCBTypes();
-           IO.File.WriteAllText(@"C:\Users\sean.halton\Desktop\New folder\hold.json", Newtonsoft.Json.JsonConvert.SerializeObject(Master));
+            IO.File.WriteAllText(@"C:\Users\sean.halton\Desktop\New folder\hold.json", Newtonsoft.Json.JsonConvert.SerializeObject(Master));
         }
 
         public void GetCBTypes()
@@ -277,12 +276,10 @@ namespace Part_Generator
                 switch (TagItem.Mach_Type)
                 {
                     case "DD":
-                        Console.WriteLine("Yes");
-                       Parts_Interface.Machining.SolidEdgeDD(TagItem);
+                        Parts_Interface.Machining.SolidEdgeDD(TagItem);
                         break;
                     default:
                         MessageBox.Show("This type has not been implemented yet");
-
                         break;
                 }
             }
@@ -321,6 +318,9 @@ namespace Part_Generator
             {
                 case "DD":
                     desc += "DD " + GetAttByName("DDAFLATS").Default_Value + " X" + GetAttByName("DDROUND").Default_Value;
+                    break;
+                case "BODY":
+//TODO add desc for bodies.
                     break;
                 default:
                     break;
