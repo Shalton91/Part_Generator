@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using IO = System.IO;
 using SolidEdgeCommunity.Extensions;
+using Part_Generator.Parts_Interface;
+using System.IO;
 
 namespace Part_Generator
 {
@@ -166,30 +168,65 @@ namespace Part_Generator
             defualtAtts da = (defualtAtts)tb.Tag;
             da.Default_Value = tb.Text;
         }
+        private object[] LogFile()
+        {
+            object[] output = new object[1];
+            string FilePath = @"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\LogFiles\MTMSEntry" +
+               System.Environment.UserName.ToUpper() +
+               Machining.RandString() + ".log";
+            IO.FileStream fs = new IO.FileStream(FilePath, IO.FileMode.OpenOrCreate);
+            IO.StreamWriter sw = new IO.StreamWriter(fs);
+            sw.WriteLine("Date:{0}", DateTime.Now);
+            sw.WriteLine("User:{0}", System.Environment.UserName.ToUpper());
+            sw.WriteLine("*".PadRight(30, '*'));
+            sw.WriteLine("User Inputs");
+            sw.WriteLine("*".PadRight(30, '*'));
+            sw.WriteLine("Input Type: {0}", cbType.Text);
+            sw.WriteLine("Gear Size: {0}", cbSize.Text);
+            sw.WriteLine("Hand: {0}", cbHand.Text);
+            sw.WriteLine("Machining Type: {0}", cbMachType.Text);
+            sw.WriteLine("Duty: {0}", cbDuty.Text);
+            sw.WriteLine("MTMS Group: {0}", cbGroup.Text);
+            sw.WriteLine("*".PadRight(30, '*'));
+            output[0] = fs;
+            output[1] = sw;
+            return output;
+
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //TODO:Add log files
-
-
-
-            //TODO:Add user selection of site then loop through selected sites
+            string hold = "";
+            var writing = LogFile();
+            var sw = (IO.StreamWriter)writing[1];
             TItem TagItem = ((TItem)cbGroup.SelectedItem);
-            mTMSLibrary.Screens m = new mTMSLibrary.Screens("72");
-            tbResults.Text += TagItem.AddToMTMS(m, tbPartNumber.Text);
-            tbResults.Text += TagItem.AddToConfigurator(m, tbPartNumber.Text)+ "\n";
-            foreach (defualtAtts da in TagItem.Default_attributes)
+            List<string> Co = new List<string>();
+            //TODO: add user choice to company selection
+            Co.Add("72");
+            Co.Add("13");
+            foreach ( string s in Co)
             {
-               tbResults.Text +=  da.MCO61(m, TagItem, tbPartNumber.Text) + "\n";
+                mTMSLibrary.Screens m = new mTMSLibrary.Screens(s);
+                sw.WriteLine("Co" + s + " results:");
+                sw.WriteLine("*".PadRight(30, '*'));
+                hold = TagItem.AddToMTMS(m, tbPartNumber.Text);
+                sw.WriteLine(hold);
+                tbResults.Text += hold + "\n";
+                hold = TagItem.AddToConfigurator(m, tbPartNumber.Text);
+                sw.WriteLine(hold);
+                tbResults.Text += hold + "\n";
+                foreach (defualtAtts da in TagItem.Default_attributes)
+                {
+                    hold = "attribute: " + da.Att_Name + "; Value: " + da.Default_Value + "; Result: " + da.MCO61(m, TagItem, tbPartNumber.Text);
+                    sw.WriteLine(hold);
+                    tbResults.Text += hold + "\n";
+                }
+                m.Close();
             }
-            m.Close();
-            m = new mTMSLibrary.Screens("13");
-            tbResults.Text += TagItem.AddToMTMS(m, tbPartNumber.Text);
-            tbResults.Text += TagItem.AddToConfigurator(m, tbPartNumber.Text) + "\n";
-            foreach (defualtAtts da in TagItem.Default_attributes)
-            {
-                tbResults.Text += da.MCO61(m, TagItem, tbPartNumber.Text) + "\n";
-            }
-            m.Close();
+            sw.Close();
+            IO.FileStream fs = (IO.FileStream)writing[0];
+            fs.Close();
+            
+            
 
         }        
 
