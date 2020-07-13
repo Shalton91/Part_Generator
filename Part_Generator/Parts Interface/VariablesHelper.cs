@@ -127,14 +127,18 @@ class VariablesHelper
         {
             case "NonStd":
                 dim.DisplayType = SolidEdgeFrameworkSupport.DimDispTypeConstants.igDimDisplayTypeUnitTolerance;
+                dim.UpdateStatus();
                 Console.WriteLine("Min: {0} Max: {1} Nom: {2}", min.ToString(), max.ToString(), nom.ToString());
                 Console.WriteLine("Upper: {0} Lower: {1}", Math.Round((max - nom), 2).ToString() + " mm", Math.Round((min - nom), 2).ToString() + " mm");
                 dim.PrimaryUpperTolerance = Math.Round((max - nom), 2).ToString();
                 dim.PrimaryLowerTolerance = Math.Round((min - nom), 2).ToString();
+                dim.UpdateStatus();
                 break;
             default:
                 dim.DisplayType = SolidEdgeFrameworkSupport.DimDispTypeConstants.igDimDisplayTypeClassPlusMinus;
+                dim.UpdateStatus();
                 dim.HoleClassString = tol;
+                dim.UpdateStatus();
                 break;
         }
     }
@@ -356,6 +360,20 @@ class VariablesHelper
                 else if (Nom > 180.0 && Nom <= 250.0) { max += 0.46; }
                 else if (Nom > 250.0 && Nom <= 315.0) { max += 0.52; }
                 else if (Nom > 315.0 && Nom <= 400.0) { max += 0.57; }
+                break;
+            case "F7":
+                if (Nom > 0.0 && Nom <= 3.0) { min +=.01; max += .022; }
+                else if (Nom > 3.0 && Nom <= 6.0) { min += 0.01; max += 0.022; }
+                else if (Nom > 6.0 && Nom <= 10.0) { min += 0.013; max += 0.028; }
+                else if (Nom > 10.0 && Nom <= 18.0) { min += 0.016; max += 0.034; }
+                else if (Nom > 18.0 && Nom <= 30.0) { min += 0.02; max += 0.041; }
+                else if (Nom > 30.0 && Nom <= 50.0) { min += 0.025; max += 0.05; }
+                else if (Nom > 50.0 && Nom <= 80.0) { min += 0.03; max += 0.06; }
+                else if (Nom > 80.0 && Nom <=  120.0) { min += 0.036; max += 0.071; }
+                else if (Nom > 120.0 && Nom <= 180.0) { min += 0.043; max += 0.083; }
+                else if (Nom > 180.0 && Nom <= 250.0) { min += 0.05; max += 0.096; }
+                else if (Nom > 250.0 && Nom <= 315.0) { min += 0.056; max += 0.108; }
+                else if (Nom > 315.0 && Nom <= 400.0) { min += 0.062; max += 0.119; }
                 break;
         }
         Console.WriteLine("Nominal: {0} Min: {1} Max: {2} Tol Name: {3}", Nom, min, max,IsoTol);

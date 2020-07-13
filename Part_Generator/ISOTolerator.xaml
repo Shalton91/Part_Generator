@@ -1,0 +1,35 @@
+﻿<Window x:Class="Part_Generator.ISOTolerator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Part_Generator"
+        mc:Ignorable="d"
+        Title="ISOTolerator" Height="109.661" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Grid.Column="0" x:Name="tbDimension" Margin="5" TextChanged="tbDimension_TextChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7" >Nom:</TextBlock>
+        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="cbTol" Margin="5" SelectionChanged="cbTol_SelectionChanged" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <ComboBoxItem Content="F7"/>
+            <ComboBoxItem Content="H8"/>
+            <ComboBoxItem Content="H9"/>
+            <ComboBoxItem Content="H11"/>
+            <ComboBoxItem Content="H12"/>
+        </ComboBox>
+        <TextBlock Grid.Row="1" Grid.Column="0" FontSize="10" Margin="7" >MIN:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" FontSize="10" Margin="7" >MAX:</TextBlock>
+        <TextBlock x:Name="tblockMin" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="tblockMax" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Border Grid.Column="1" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="5"/>
+
+        <Border Grid.Column="0" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="5"/>
+    </Grid>
+</Window>

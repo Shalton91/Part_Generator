@@ -1,0 +1,1214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="mTMS" targetNamespace="http://tempuri.org/mTMS.xsd" xmlns:mstns="http://tempuri.org/mTMS.xsd" xmlns="http://tempuri.org/mTMS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.Part_Generator.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PART_DATATableAdapter" GeneratorDataComponentClassName="PART_DATATableAdapter" Name="PART_DATA" UserDataComponentName="PART_DATATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO "MTMS"."PART_DATA" ("PART1_CO_SITE", "PART1_REC_TYPE", "PART1_PART", "PART2_CO_SITE", "PART2_REC_TYPE", "PART2_XREF", "PART2_PART", "PARTCOMMODITY", "PARTPROD_GROUP", "PARTSALES_GROUP", "PARTCOST_CENTRE", "PARTCONTRACT", "PARTCONTRACT_FLG", "PARTDESC", "PARTSERIAL_NO", "PARTDRAWING_NO", "PARTTYPE", "PARTPHANTOM", "PARTCATALOGUE", "PARTAUTO_PROMISE", "PARTKEY_PART", "PARTLOW_LEV", "PARTEXPLODE_STOP", "PARTMPS_MASTER", "PARTPROJ_BAL_IND", "PARTSTD_SOURCE", "PARTOBS_CODE", "PARTOBS_DATE", "PARTOBS_SERIAL", "PARTREPLACE_PART", "PARTALT_PART_1", "PARTALT_PART_2", "PARTDATE_L_ACT", "PARTDATE_CREATED", "PARTPERIOD", "PARTSYNC_PERIOD", "PARTSYNC_START", "PARTDEM_TIMFENCE", "PARTPLAN_TIMFENC", "PARTAGGRO_LEAD", "PARTDAY_DEMAND", "PARTPERD_IN_DAYS", "PARTANALY_CODE1", "PARTANALY_CODE2", "PARTANALY_CODE3", "PARTANALY_CODE4", "PARTMODEL", "PARTVARIANT", "PARTECN_ISS_DATE", "PARTECN_EFF_DATE", "PARTECN_REQUEST", "PARTCLASS", "PARTSALES_BLOCK", "PARTSALES_STATS", "PARTSALES_SER_NO", "PARTLOT_TRACE", "PARTNO_BULK_ORDS", "PARTPA_CODE", "PARTABC_CLASS", "PARTDATE_PA_CHK", "PARTFIFO_DATE", "PARTFIFO_TIME", "PARTRATE_SCRAP", "PARTQTY_SCRAP", "PARTSHELF_LIFE", "PARTLEAD_TIME", "PARTQUOTED_LEAD", "PARTINSPECT_LEAD", "PARTDESP_LTIME", "PARTPROCESS_LEAD", "PARTCALLOFF_LEAD", "PARTBULK_ISS", "PARTBULK_QTY", "PARTBULK_DAYS", "PARTNO_WU", "PARTORD_POLICY", "PARTORDER_COST", "PARTPEGGING_FLAG", "PARTORDER_MULT", "PARTISSUE_ROUND", "PARTORD_ROUND", "PARTSTD_BATCH", "PARTCOST_BATCH", "PARTCOMP_BATCH", "PARTOPER_BATCH", "PARTMIN_BATCH", "PARTMAX_BATCH", "PARTREORD_LEVEL", "PARTMIN_STOCK", "PARTMAX_STOCK", "PARTROQ", "PARTMIN_DAYS_SUP", "PARTPROD_RATE", "PARTPROD_PERIOD", "PARTSALESMAN", "PARTPLANNER", "PARTBUYER", "PARTTIME_BUCKET", "PARTDEF_STORE", "PARTDEF_BIN", "PARTDEF_VAT_CODE", "PARTDEF_SUPPLIER", "PARTDEF_SUP_PART", "PARTBASIC_UNIT", "PARTALT_UNIT", "PARTALT_CON_FACT", "PARTALT_UNIT_2", "PARTALT_CONV_2", "PARTUNIT_COST", "PARTCOST_DATE", "PARTBOM_BATCH", "PARTWEIGHT_UNIT", "PARTBASIC_WEIGHT", "PARTDIM_UNIT1", "PARTDIM_UNIT2", "PARTDIM_UNIT3", "PARTDIM1", "PARTDIM2", "PARTDIM3", "PARTVOL_UNIT", "PARTVOL", "PARTSIZE_CAT", "PARTISS_UNIT", "PARTREC_UNIT", "PARTMATL_PRICE", "PARTTOT_KIT", "PARTQTY_STOCK", "PARTMRP_STOCK", "PARTQTY_THWIP", "PARTQTY_TRANS", "PARTQTY_DESP", "PARTQTY_GI", "PARTQTY_QUAR", "PARTQTY_1", "PARTQTY_2", "PARTQTY_3", "PARTQTY_4", "PARTQTY_5", "PARTQTY_6", "PARTQTY_UNREVIEW", "PARTALLOC_SUG", "PARTALLOC_UNCOM", "PARTALLOC_FIRM", "PARTALLOC_COM", "PARTALLOC_SAL", "PARTQTY_REQN", "PARTORD_UNREL", "PARTORD_SUG", "PARTORD_UNCOM", "PARTORD_FIRM", "PARTORD_COM", "PARTORD_PUR", "PARTUPDATE_COUNT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PART1_CO_SITE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PART1_CO_SITE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="PART1_REC_TYPE" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PART1_REC_TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PART1_PART" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PART1_PART" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PART2_CO_SITE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PART2_CO_SITE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="PART2_REC_TYPE" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="PART2_REC_TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PART2_XREF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PART2_XREF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PART2_PART" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PART2_PART" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTCOMMODITY" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTCOMMODITY" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTPROD_GROUP" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTPROD_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTSALES_GROUP" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTSALES_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTCOST_CENTRE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTCOST_CENTRE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTCONTRACT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTCONTRACT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTCONTRACT_FLG" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTCONTRACT_FLG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDESC" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDESC" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTSERIAL_NO" Precision="7" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTSERIAL_NO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDRAWING_NO" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDRAWING_NO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTTYPE" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTTYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTPHANTOM" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTPHANTOM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTCATALOGUE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTCATALOGUE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTAUTO_PROMISE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTAUTO_PROMISE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTKEY_PART" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTKEY_PART" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTLOW_LEV" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTLOW_LEV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTEXPLODE_STOP" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTEXPLODE_STOP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTMPS_MASTER" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTMPS_MASTER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTPROJ_BAL_IND" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTPROJ_BAL_IND" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTSTD_SOURCE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTSTD_SOURCE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTOBS_CODE" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTOBS_CODE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTOBS_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTOBS_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTOBS_SERIAL" Precision="7" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTOBS_SERIAL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTREPLACE_PART" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTREPLACE_PART" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTALT_PART_1" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTALT_PART_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTALT_PART_2" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTALT_PART_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTDATE_L_ACT" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTDATE_L_ACT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTDATE_CREATED" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTDATE_CREATED" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTPERIOD" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTPERIOD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTSYNC_PERIOD" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTSYNC_PERIOD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTSYNC_START" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTSYNC_START" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTDEM_TIMFENCE" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTDEM_TIMFENCE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTPLAN_TIMFENC" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTPLAN_TIMFENC" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTAGGRO_LEAD" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTAGGRO_LEAD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTDAY_DEMAND" Precision="15" ProviderType="Decimal" Scale="8" Size="0" SourceColumn="PARTDAY_DEMAND" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTPERD_IN_DAYS" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTPERD_IN_DAYS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTANALY_CODE1" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTANALY_CODE1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTANALY_CODE2" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTANALY_CODE2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTANALY_CODE3" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTANALY_CODE3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTANALY_CODE4" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTANALY_CODE4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTMODEL" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTMODEL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTVARIANT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTVARIANT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTECN_ISS_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTECN_ISS_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTECN_EFF_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTECN_EFF_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTECN_REQUEST" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTECN_REQUEST" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTCLASS" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTCLASS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTSALES_BLOCK" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTSALES_BLOCK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTSALES_STATS" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTSALES_STATS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTSALES_SER_NO" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTSALES_SER_NO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTLOT_TRACE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTLOT_TRACE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTNO_BULK_ORDS" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTNO_BULK_ORDS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTPA_CODE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTPA_CODE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTABC_CLASS" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTABC_CLASS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTDATE_PA_CHK" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTDATE_PA_CHK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTFIFO_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTFIFO_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTFIFO_TIME" Precision="7" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTFIFO_TIME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTRATE_SCRAP" Precision="7" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTRATE_SCRAP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_SCRAP" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_SCRAP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTSHELF_LIFE" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTSHELF_LIFE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTLEAD_TIME" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTLEAD_TIME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQUOTED_LEAD" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTQUOTED_LEAD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTINSPECT_LEAD" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTINSPECT_LEAD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTDESP_LTIME" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTDESP_LTIME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTPROCESS_LEAD" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTPROCESS_LEAD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTCALLOFF_LEAD" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTCALLOFF_LEAD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTBULK_ISS" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTBULK_ISS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTBULK_QTY" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTBULK_QTY" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTBULK_DAYS" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTBULK_DAYS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTNO_WU" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTNO_WU" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORD_POLICY" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTORD_POLICY" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORDER_COST" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORDER_COST" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTPEGGING_FLAG" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTPEGGING_FLAG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORDER_MULT" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORDER_MULT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTISSUE_ROUND" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTISSUE_ROUND" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORD_ROUND" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORD_ROUND" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTSTD_BATCH" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTSTD_BATCH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTCOST_BATCH" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTCOST_BATCH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTCOMP_BATCH" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTCOMP_BATCH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTOPER_BATCH" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTOPER_BATCH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTMIN_BATCH" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTMIN_BATCH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTMAX_BATCH" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTMAX_BATCH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTREORD_LEVEL" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTREORD_LEVEL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTMIN_STOCK" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTMIN_STOCK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTMAX_STOCK" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTMAX_STOCK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTROQ" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTROQ" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTMIN_DAYS_SUP" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTMIN_DAYS_SUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTPROD_RATE" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTPROD_RATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTPROD_PERIOD" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTPROD_PERIOD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTSALESMAN" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTSALESMAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTPLANNER" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTPLANNER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTBUYER" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTBUYER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTTIME_BUCKET" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTTIME_BUCKET" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDEF_STORE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDEF_STORE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDEF_BIN" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDEF_BIN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDEF_VAT_CODE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDEF_VAT_CODE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDEF_SUPPLIER" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDEF_SUPPLIER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDEF_SUP_PART" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDEF_SUP_PART" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTBASIC_UNIT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTBASIC_UNIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTALT_UNIT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTALT_UNIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTALT_CON_FACT" Precision="15" ProviderType="Decimal" Scale="8" Size="0" SourceColumn="PARTALT_CON_FACT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTALT_UNIT_2" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTALT_UNIT_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTALT_CONV_2" Precision="15" ProviderType="Decimal" Scale="8" Size="0" SourceColumn="PARTALT_CONV_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTUNIT_COST" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTUNIT_COST" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="PARTCOST_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PARTCOST_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTBOM_BATCH" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTBOM_BATCH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTWEIGHT_UNIT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTWEIGHT_UNIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTBASIC_WEIGHT" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTBASIC_WEIGHT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDIM_UNIT1" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDIM_UNIT1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDIM_UNIT2" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDIM_UNIT2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTDIM_UNIT3" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTDIM_UNIT3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTDIM1" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTDIM1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTDIM2" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTDIM2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTDIM3" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTDIM3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTVOL_UNIT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTVOL_UNIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTVOL" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTVOL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTSIZE_CAT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTSIZE_CAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTISS_UNIT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTISS_UNIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="PARTREC_UNIT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="PARTREC_UNIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTMATL_PRICE" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTMATL_PRICE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTTOT_KIT" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTTOT_KIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_STOCK" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_STOCK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTMRP_STOCK" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTMRP_STOCK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_THWIP" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_THWIP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_TRANS" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_TRANS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_DESP" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_DESP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_GI" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_GI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_QUAR" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_QUAR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_1" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_2" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_3" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_4" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_5" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_6" Precision="11" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_UNREVIEW" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_UNREVIEW" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTALLOC_SUG" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTALLOC_SUG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTALLOC_UNCOM" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTALLOC_UNCOM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTALLOC_FIRM" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTALLOC_FIRM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTALLOC_COM" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTALLOC_COM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTALLOC_SAL" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTALLOC_SAL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTQTY_REQN" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTQTY_REQN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORD_UNREL" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORD_UNREL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORD_SUG" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORD_SUG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORD_UNCOM" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORD_UNCOM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORD_FIRM" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORD_FIRM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORD_COM" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORD_COM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTORD_PUR" Precision="15" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="PARTORD_PUR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PARTUPDATE_COUNT" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PARTUPDATE_COUNT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PART1_CO_SITE, PART1_REC_TYPE, PART1_PART, PART2_CO_SITE, PART2_REC_TYPE, PART2_XREF, PART2_PART, PARTCOMMODITY, PARTPROD_GROUP, PARTSALES_GROUP, PARTCOST_CENTRE, PARTCONTRACT, 
+                         PARTCONTRACT_FLG, PARTDESC, PARTSERIAL_NO, PARTDRAWING_NO, PARTTYPE, PARTPHANTOM, PARTCATALOGUE, PARTAUTO_PROMISE, PARTKEY_PART, PARTLOW_LEV, PARTEXPLODE_STOP, PARTMPS_MASTER, 
+                         PARTPROJ_BAL_IND, PARTSTD_SOURCE, PARTOBS_CODE, PARTOBS_DATE, PARTOBS_SERIAL, PARTREPLACE_PART, PARTALT_PART_1, PARTALT_PART_2, PARTDATE_L_ACT, PARTDATE_CREATED, PARTPERIOD, 
+                         PARTSYNC_PERIOD, PARTSYNC_START, PARTDEM_TIMFENCE, PARTPLAN_TIMFENC, PARTAGGRO_LEAD, PARTDAY_DEMAND, PARTPERD_IN_DAYS, PARTANALY_CODE1, PARTANALY_CODE2, PARTANALY_CODE3, 
+                         PARTANALY_CODE4, PARTMODEL, PARTVARIANT, PARTECN_ISS_DATE, PARTECN_EFF_DATE, PARTECN_REQUEST, PARTCLASS, PARTSALES_BLOCK, PARTSALES_STATS, PARTSALES_SER_NO, PARTLOT_TRACE, 
+                         PARTNO_BULK_ORDS, PARTPA_CODE, PARTABC_CLASS, PARTDATE_PA_CHK, PARTFIFO_DATE, PARTFIFO_TIME, PARTRATE_SCRAP, PARTQTY_SCRAP, PARTSHELF_LIFE, PARTLEAD_TIME, PARTQUOTED_LEAD, 
+                         PARTINSPECT_LEAD, PARTDESP_LTIME, PARTPROCESS_LEAD, PARTCALLOFF_LEAD, PARTBULK_ISS, PARTBULK_QTY, PARTBULK_DAYS, PARTNO_WU, PARTORD_POLICY, PARTORDER_COST, PARTPEGGING_FLAG, 
+                         PARTORDER_MULT, PARTISSUE_ROUND, PARTORD_ROUND, PARTSTD_BATCH, PARTCOST_BATCH, PARTCOMP_BATCH, PARTOPER_BATCH, PARTMIN_BATCH, PARTMAX_BATCH, PARTREORD_LEVEL, PARTMIN_STOCK, 
+                         PARTMAX_STOCK, PARTROQ, PARTMIN_DAYS_SUP, PARTPROD_RATE, PARTPROD_PERIOD, PARTSALESMAN, PARTPLANNER, PARTBUYER, PARTTIME_BUCKET, PARTDEF_STORE, PARTDEF_BIN, PARTDEF_VAT_CODE, 
+                         PARTDEF_SUPPLIER, PARTDEF_SUP_PART, PARTBASIC_UNIT, PARTALT_UNIT, PARTALT_CON_FACT, PARTALT_UNIT_2, PARTALT_CONV_2, PARTUNIT_COST, PARTCOST_DATE, PARTBOM_BATCH, PARTWEIGHT_UNIT, 
+                         PARTBASIC_WEIGHT, PARTDIM_UNIT1, PARTDIM_UNIT2, PARTDIM_UNIT3, PARTDIM1, PARTDIM2, PARTDIM3, PARTVOL_UNIT, PARTVOL, PARTSIZE_CAT, PARTISS_UNIT, PARTREC_UNIT, PARTMATL_PRICE, PARTTOT_KIT, 
+                         PARTQTY_STOCK, PARTMRP_STOCK, PARTQTY_THWIP, PARTQTY_TRANS, PARTQTY_DESP, PARTQTY_GI, PARTQTY_QUAR, PARTQTY_1, PARTQTY_2, PARTQTY_3, PARTQTY_4, PARTQTY_5, PARTQTY_6, 
+                         PARTQTY_UNREVIEW, PARTALLOC_SUG, PARTALLOC_UNCOM, PARTALLOC_FIRM, PARTALLOC_COM, PARTALLOC_SAL, PARTQTY_REQN, PARTORD_UNREL, PARTORD_SUG, PARTORD_UNCOM, PARTORD_FIRM, 
+                         PARTORD_COM, PARTORD_PUR, PARTUPDATE_COUNT
+FROM            MTMS.PART_DATA
+WHERE        (PART1_CO_SITE = ?) AND (PART1_PART = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="PART1_CO_SITE" DataSourceName="PART_DATA" DataTypeServer="CHAR" DbType="String" Direction="Input" ParameterName="PART1_CO_SITE" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="PART1_CO_SITE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="PART1_PART" DataSourceName="PART_DATA" DataTypeServer="CHAR" DbType="String" Direction="Input" ParameterName="PART1_PART" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="PART1_PART" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PART1_CO_SITE" DataSetColumn="PART1_CO_SITE" />
+              <Mapping SourceColumn="PART1_REC_TYPE" DataSetColumn="PART1_REC_TYPE" />
+              <Mapping SourceColumn="PART1_PART" DataSetColumn="PART1_PART" />
+              <Mapping SourceColumn="PART2_CO_SITE" DataSetColumn="PART2_CO_SITE" />
+              <Mapping SourceColumn="PART2_REC_TYPE" DataSetColumn="PART2_REC_TYPE" />
+              <Mapping SourceColumn="PART2_XREF" DataSetColumn="PART2_XREF" />
+              <Mapping SourceColumn="PART2_PART" DataSetColumn="PART2_PART" />
+              <Mapping SourceColumn="PARTCOMMODITY" DataSetColumn="PARTCOMMODITY" />
+              <Mapping SourceColumn="PARTPROD_GROUP" DataSetColumn="PARTPROD_GROUP" />
+              <Mapping SourceColumn="PARTSALES_GROUP" DataSetColumn="PARTSALES_GROUP" />
+              <Mapping SourceColumn="PARTCOST_CENTRE" DataSetColumn="PARTCOST_CENTRE" />
+              <Mapping SourceColumn="PARTCONTRACT" DataSetColumn="PARTCONTRACT" />
+              <Mapping SourceColumn="PARTCONTRACT_FLG" DataSetColumn="PARTCONTRACT_FLG" />
+              <Mapping SourceColumn="PARTDESC" DataSetColumn="PARTDESC" />
+              <Mapping SourceColumn="PARTSERIAL_NO" DataSetColumn="PARTSERIAL_NO" />
+              <Mapping SourceColumn="PARTDRAWING_NO" DataSetColumn="PARTDRAWING_NO" />
+              <Mapping SourceColumn="PARTTYPE" DataSetColumn="PARTTYPE" />
+              <Mapping SourceColumn="PARTPHANTOM" DataSetColumn="PARTPHANTOM" />
+              <Mapping SourceColumn="PARTCATALOGUE" DataSetColumn="PARTCATALOGUE" />
+              <Mapping SourceColumn="PARTAUTO_PROMISE" DataSetColumn="PARTAUTO_PROMISE" />
+              <Mapping SourceColumn="PARTKEY_PART" DataSetColumn="PARTKEY_PART" />
+              <Mapping SourceColumn="PARTLOW_LEV" DataSetColumn="PARTLOW_LEV" />
+              <Mapping SourceColumn="PARTEXPLODE_STOP" DataSetColumn="PARTEXPLODE_STOP" />
+              <Mapping SourceColumn="PARTMPS_MASTER" DataSetColumn="PARTMPS_MASTER" />
+              <Mapping SourceColumn="PARTPROJ_BAL_IND" DataSetColumn="PARTPROJ_BAL_IND" />
+              <Mapping SourceColumn="PARTSTD_SOURCE" DataSetColumn="PARTSTD_SOURCE" />
+              <Mapping SourceColumn="PARTOBS_CODE" DataSetColumn="PARTOBS_CODE" />
+              <Mapping SourceColumn="PARTOBS_DATE" DataSetColumn="PARTOBS_DATE" />
+              <Mapping SourceColumn="PARTOBS_SERIAL" DataSetColumn="PARTOBS_SERIAL" />
+              <Mapping SourceColumn="PARTREPLACE_PART" DataSetColumn="PARTREPLACE_PART" />
+              <Mapping SourceColumn="PARTALT_PART_1" DataSetColumn="PARTALT_PART_1" />
+              <Mapping SourceColumn="PARTALT_PART_2" DataSetColumn="PARTALT_PART_2" />
+              <Mapping SourceColumn="PARTDATE_L_ACT" DataSetColumn="PARTDATE_L_ACT" />
+              <Mapping SourceColumn="PARTDATE_CREATED" DataSetColumn="PARTDATE_CREATED" />
+              <Mapping SourceColumn="PARTPERIOD" DataSetColumn="PARTPERIOD" />
+              <Mapping SourceColumn="PARTSYNC_PERIOD" DataSetColumn="PARTSYNC_PERIOD" />
+              <Mapping SourceColumn="PARTSYNC_START" DataSetColumn="PARTSYNC_START" />
+              <Mapping SourceColumn="PARTDEM_TIMFENCE" DataSetColumn="PARTDEM_TIMFENCE" />
+              <Mapping SourceColumn="PARTPLAN_TIMFENC" DataSetColumn="PARTPLAN_TIMFENC" />
+              <Mapping SourceColumn="PARTAGGRO_LEAD" DataSetColumn="PARTAGGRO_LEAD" />
+              <Mapping SourceColumn="PARTDAY_DEMAND" DataSetColumn="PARTDAY_DEMAND" />
+              <Mapping SourceColumn="PARTPERD_IN_DAYS" DataSetColumn="PARTPERD_IN_DAYS" />
+              <Mapping SourceColumn="PARTANALY_CODE1" DataSetColumn="PARTANALY_CODE1" />
+              <Mapping SourceColumn="PARTANALY_CODE2" DataSetColumn="PARTANALY_CODE2" />
+              <Mapping SourceColumn="PARTANALY_CODE3" DataSetColumn="PARTANALY_CODE3" />
+              <Mapping SourceColumn="PARTANALY_CODE4" DataSetColumn="PARTANALY_CODE4" />
+              <Mapping SourceColumn="PARTMODEL" DataSetColumn="PARTMODEL" />
+              <Mapping SourceColumn="PARTVARIANT" DataSetColumn="PARTVARIANT" />
+              <Mapping SourceColumn="PARTECN_ISS_DATE" DataSetColumn="PARTECN_ISS_DATE" />
+              <Mapping SourceColumn="PARTECN_EFF_DATE" DataSetColumn="PARTECN_EFF_DATE" />
+              <Mapping SourceColumn="PARTECN_REQUEST" DataSetColumn="PARTECN_REQUEST" />
+              <Mapping SourceColumn="PARTCLASS" DataSetColumn="PARTCLASS" />
+              <Mapping SourceColumn="PARTSALES_BLOCK" DataSetColumn="PARTSALES_BLOCK" />
+              <Mapping SourceColumn="PARTSALES_STATS" DataSetColumn="PARTSALES_STATS" />
+              <Mapping SourceColumn="PARTSALES_SER_NO" DataSetColumn="PARTSALES_SER_NO" />
+              <Mapping SourceColumn="PARTLOT_TRACE" DataSetColumn="PARTLOT_TRACE" />
+              <Mapping SourceColumn="PARTNO_BULK_ORDS" DataSetColumn="PARTNO_BULK_ORDS" />
+              <Mapping SourceColumn="PARTPA_CODE" DataSetColumn="PARTPA_CODE" />
+              <Mapping SourceColumn="PARTABC_CLASS" DataSetColumn="PARTABC_CLASS" />
+              <Mapping SourceColumn="PARTDATE_PA_CHK" DataSetColumn="PARTDATE_PA_CHK" />
+              <Mapping SourceColumn="PARTFIFO_DATE" DataSetColumn="PARTFIFO_DATE" />
+              <Mapping SourceColumn="PARTFIFO_TIME" DataSetColumn="PARTFIFO_TIME" />
+              <Mapping SourceColumn="PARTRATE_SCRAP" DataSetColumn="PARTRATE_SCRAP" />
+              <Mapping SourceColumn="PARTQTY_SCRAP" DataSetColumn="PARTQTY_SCRAP" />
+              <Mapping SourceColumn="PARTSHELF_LIFE" DataSetColumn="PARTSHELF_LIFE" />
+              <Mapping SourceColumn="PARTLEAD_TIME" DataSetColumn="PARTLEAD_TIME" />
+              <Mapping SourceColumn="PARTQUOTED_LEAD" DataSetColumn="PARTQUOTED_LEAD" />
+              <Mapping SourceColumn="PARTINSPECT_LEAD" DataSetColumn="PARTINSPECT_LEAD" />
+              <Mapping SourceColumn="PARTDESP_LTIME" DataSetColumn="PARTDESP_LTIME" />
+              <Mapping SourceColumn="PARTPROCESS_LEAD" DataSetColumn="PARTPROCESS_LEAD" />
+              <Mapping SourceColumn="PARTCALLOFF_LEAD" DataSetColumn="PARTCALLOFF_LEAD" />
+              <Mapping SourceColumn="PARTBULK_ISS" DataSetColumn="PARTBULK_ISS" />
+              <Mapping SourceColumn="PARTBULK_QTY" DataSetColumn="PARTBULK_QTY" />
+              <Mapping SourceColumn="PARTBULK_DAYS" DataSetColumn="PARTBULK_DAYS" />
+              <Mapping SourceColumn="PARTNO_WU" DataSetColumn="PARTNO_WU" />
+              <Mapping SourceColumn="PARTORD_POLICY" DataSetColumn="PARTORD_POLICY" />
+              <Mapping SourceColumn="PARTORDER_COST" DataSetColumn="PARTORDER_COST" />
+              <Mapping SourceColumn="PARTPEGGING_FLAG" DataSetColumn="PARTPEGGING_FLAG" />
+              <Mapping SourceColumn="PARTORDER_MULT" DataSetColumn="PARTORDER_MULT" />
+              <Mapping SourceColumn="PARTISSUE_ROUND" DataSetColumn="PARTISSUE_ROUND" />
+              <Mapping SourceColumn="PARTORD_ROUND" DataSetColumn="PARTORD_ROUND" />
+              <Mapping SourceColumn="PARTSTD_BATCH" DataSetColumn="PARTSTD_BATCH" />
+              <Mapping SourceColumn="PARTCOST_BATCH" DataSetColumn="PARTCOST_BATCH" />
+              <Mapping SourceColumn="PARTCOMP_BATCH" DataSetColumn="PARTCOMP_BATCH" />
+              <Mapping SourceColumn="PARTOPER_BATCH" DataSetColumn="PARTOPER_BATCH" />
+              <Mapping SourceColumn="PARTMIN_BATCH" DataSetColumn="PARTMIN_BATCH" />
+              <Mapping SourceColumn="PARTMAX_BATCH" DataSetColumn="PARTMAX_BATCH" />
+              <Mapping SourceColumn="PARTREORD_LEVEL" DataSetColumn="PARTREORD_LEVEL" />
+              <Mapping SourceColumn="PARTMIN_STOCK" DataSetColumn="PARTMIN_STOCK" />
+              <Mapping SourceColumn="PARTMAX_STOCK" DataSetColumn="PARTMAX_STOCK" />
+              <Mapping SourceColumn="PARTROQ" DataSetColumn="PARTROQ" />
+              <Mapping SourceColumn="PARTMIN_DAYS_SUP" DataSetColumn="PARTMIN_DAYS_SUP" />
+              <Mapping SourceColumn="PARTPROD_RATE" DataSetColumn="PARTPROD_RATE" />
+              <Mapping SourceColumn="PARTPROD_PERIOD" DataSetColumn="PARTPROD_PERIOD" />
+              <Mapping SourceColumn="PARTSALESMAN" DataSetColumn="PARTSALESMAN" />
+              <Mapping SourceColumn="PARTPLANNER" DataSetColumn="PARTPLANNER" />
+              <Mapping SourceColumn="PARTBUYER" DataSetColumn="PARTBUYER" />
+              <Mapping SourceColumn="PARTTIME_BUCKET" DataSetColumn="PARTTIME_BUCKET" />
+              <Mapping SourceColumn="PARTDEF_STORE" DataSetColumn="PARTDEF_STORE" />
+              <Mapping SourceColumn="PARTDEF_BIN" DataSetColumn="PARTDEF_BIN" />
+              <Mapping SourceColumn="PARTDEF_VAT_CODE" DataSetColumn="PARTDEF_VAT_CODE" />
+              <Mapping SourceColumn="PARTDEF_SUPPLIER" DataSetColumn="PARTDEF_SUPPLIER" />
+              <Mapping SourceColumn="PARTDEF_SUP_PART" DataSetColumn="PARTDEF_SUP_PART" />
+              <Mapping SourceColumn="PARTBASIC_UNIT" DataSetColumn="PARTBASIC_UNIT" />
+              <Mapping SourceColumn="PARTALT_UNIT" DataSetColumn="PARTALT_UNIT" />
+              <Mapping SourceColumn="PARTALT_CON_FACT" DataSetColumn="PARTALT_CON_FACT" />
+              <Mapping SourceColumn="PARTALT_UNIT_2" DataSetColumn="PARTALT_UNIT_2" />
+              <Mapping SourceColumn="PARTALT_CONV_2" DataSetColumn="PARTALT_CONV_2" />
+              <Mapping SourceColumn="PARTUNIT_COST" DataSetColumn="PARTUNIT_COST" />
+              <Mapping SourceColumn="PARTCOST_DATE" DataSetColumn="PARTCOST_DATE" />
+              <Mapping SourceColumn="PARTBOM_BATCH" DataSetColumn="PARTBOM_BATCH" />
+              <Mapping SourceColumn="PARTWEIGHT_UNIT" DataSetColumn="PARTWEIGHT_UNIT" />
+              <Mapping SourceColumn="PARTBASIC_WEIGHT" DataSetColumn="PARTBASIC_WEIGHT" />
+              <Mapping SourceColumn="PARTDIM_UNIT1" DataSetColumn="PARTDIM_UNIT1" />
+              <Mapping SourceColumn="PARTDIM_UNIT2" DataSetColumn="PARTDIM_UNIT2" />
+              <Mapping SourceColumn="PARTDIM_UNIT3" DataSetColumn="PARTDIM_UNIT3" />
+              <Mapping SourceColumn="PARTDIM1" DataSetColumn="PARTDIM1" />
+              <Mapping SourceColumn="PARTDIM2" DataSetColumn="PARTDIM2" />
+              <Mapping SourceColumn="PARTDIM3" DataSetColumn="PARTDIM3" />
+              <Mapping SourceColumn="PARTVOL_UNIT" DataSetColumn="PARTVOL_UNIT" />
+              <Mapping SourceColumn="PARTVOL" DataSetColumn="PARTVOL" />
+              <Mapping SourceColumn="PARTSIZE_CAT" DataSetColumn="PARTSIZE_CAT" />
+              <Mapping SourceColumn="PARTISS_UNIT" DataSetColumn="PARTISS_UNIT" />
+              <Mapping SourceColumn="PARTREC_UNIT" DataSetColumn="PARTREC_UNIT" />
+              <Mapping SourceColumn="PARTMATL_PRICE" DataSetColumn="PARTMATL_PRICE" />
+              <Mapping SourceColumn="PARTTOT_KIT" DataSetColumn="PARTTOT_KIT" />
+              <Mapping SourceColumn="PARTQTY_STOCK" DataSetColumn="PARTQTY_STOCK" />
+              <Mapping SourceColumn="PARTMRP_STOCK" DataSetColumn="PARTMRP_STOCK" />
+              <Mapping SourceColumn="PARTQTY_THWIP" DataSetColumn="PARTQTY_THWIP" />
+              <Mapping SourceColumn="PARTQTY_TRANS" DataSetColumn="PARTQTY_TRANS" />
+              <Mapping SourceColumn="PARTQTY_DESP" DataSetColumn="PARTQTY_DESP" />
+              <Mapping SourceColumn="PARTQTY_GI" DataSetColumn="PARTQTY_GI" />
+              <Mapping SourceColumn="PARTQTY_QUAR" DataSetColumn="PARTQTY_QUAR" />
+              <Mapping SourceColumn="PARTQTY_1" DataSetColumn="PARTQTY_1" />
+              <Mapping SourceColumn="PARTQTY_2" DataSetColumn="PARTQTY_2" />
+              <Mapping SourceColumn="PARTQTY_3" DataSetColumn="PARTQTY_3" />
+              <Mapping SourceColumn="PARTQTY_4" DataSetColumn="PARTQTY_4" />
+              <Mapping SourceColumn="PARTQTY_5" DataSetColumn="PARTQTY_5" />
+              <Mapping SourceColumn="PARTQTY_6" DataSetColumn="PARTQTY_6" />
+              <Mapping SourceColumn="PARTQTY_UNREVIEW" DataSetColumn="PARTQTY_UNREVIEW" />
+              <Mapping SourceColumn="PARTALLOC_SUG" DataSetColumn="PARTALLOC_SUG" />
+              <Mapping SourceColumn="PARTALLOC_UNCOM" DataSetColumn="PARTALLOC_UNCOM" />
+              <Mapping SourceColumn="PARTALLOC_FIRM" DataSetColumn="PARTALLOC_FIRM" />
+              <Mapping SourceColumn="PARTALLOC_COM" DataSetColumn="PARTALLOC_COM" />
+              <Mapping SourceColumn="PARTALLOC_SAL" DataSetColumn="PARTALLOC_SAL" />
+              <Mapping SourceColumn="PARTQTY_REQN" DataSetColumn="PARTQTY_REQN" />
+              <Mapping SourceColumn="PARTORD_UNREL" DataSetColumn="PARTORD_UNREL" />
+              <Mapping SourceColumn="PARTORD_SUG" DataSetColumn="PARTORD_SUG" />
+              <Mapping SourceColumn="PARTORD_UNCOM" DataSetColumn="PARTORD_UNCOM" />
+              <Mapping SourceColumn="PARTORD_FIRM" DataSetColumn="PARTORD_FIRM" />
+              <Mapping SourceColumn="PARTORD_COM" DataSetColumn="PARTORD_COM" />
+              <Mapping SourceColumn="PARTORD_PUR" DataSetColumn="PARTORD_PUR" />
+              <Mapping SourceColumn="PARTUPDATE_COUNT" DataSetColumn="PARTUPDATE_COUNT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MODX_DATATableAdapter" GeneratorDataComponentClassName="MODX_DATATableAdapter" Name="MODX_DATA" UserDataComponentName="MODX_DATATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO "MTMS"."MODX_DATA" ("MODX1_CO_SITE", "MODX1_REC_TYPE", "MODX1_MAST_REF", "MODX1_COMP_GROUP", "MODX1_COMP_REF", "MODX1_STAGE", "MODX1_DATE_IN", "MODX1_ITEM", "MODX2_CO_SITE", "MODX2_REC_TYPE", "MODX2_COMP_REF", "MODX2_STAGE", "MODX2_DATE_IN", "MODX2_ITEM", "MODX2_COMP_GROUP", "MODX2_MAST_REF", "MODX3_CO_SITE", "MODX3_REC_TYPE", "MODX3_COMP_GROUP", "MODX3_COMP_REF", "MODX3_STAGE", "MODX3_DATE_IN", "MODX3_ITEM", "MODX3_MAST_REF", "MODX4_CO_SITE", "MODX4_REC_TYPE", "MODX4_MAST_REF", "MODX4_COMP_GROUP", "MODX4_STAGE", "MODX4_DATE_IN", "MODX4_ITEM", "MODX4_COMP_REF", "MODXUSAGE", "MODXUSAGE_ATTR", "MODXUNIT", "MODXMAST_TYPE", "MODXCOMP_TYPE", "MODXCOMP_FLAG", "MODXDATE_OUT", "MODXLINE_NO", "MODXLEAD_TIME", "MODXSPARE", "MODXUPDATE_COUNT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX1_CO_SITE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX1_CO_SITE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="MODX1_REC_TYPE" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="MODX1_REC_TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX1_MAST_REF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX1_MAST_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX1_COMP_GROUP" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX1_COMP_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX1_COMP_REF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX1_COMP_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX1_STAGE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX1_STAGE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="MODX1_DATE_IN" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="MODX1_DATE_IN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX1_ITEM" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX1_ITEM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX2_CO_SITE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX2_CO_SITE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="MODX2_REC_TYPE" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="MODX2_REC_TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX2_COMP_REF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX2_COMP_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX2_STAGE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX2_STAGE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="MODX2_DATE_IN" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="MODX2_DATE_IN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX2_ITEM" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX2_ITEM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX2_COMP_GROUP" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX2_COMP_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX2_MAST_REF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX2_MAST_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX3_CO_SITE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX3_CO_SITE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="MODX3_REC_TYPE" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="MODX3_REC_TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX3_COMP_GROUP" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX3_COMP_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX3_COMP_REF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX3_COMP_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX3_STAGE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX3_STAGE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="MODX3_DATE_IN" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="MODX3_DATE_IN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX3_ITEM" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX3_ITEM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX3_MAST_REF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX3_MAST_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX4_CO_SITE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX4_CO_SITE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="MODX4_REC_TYPE" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="MODX4_REC_TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX4_MAST_REF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX4_MAST_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX4_COMP_GROUP" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX4_COMP_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX4_STAGE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX4_STAGE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="MODX4_DATE_IN" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="MODX4_DATE_IN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX4_ITEM" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX4_ITEM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODX4_COMP_REF" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODX4_COMP_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="MODXUSAGE" Precision="15" ProviderType="Decimal" Scale="8" Size="0" SourceColumn="MODXUSAGE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODXUSAGE_ATTR" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODXUSAGE_ATTR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODXUNIT" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODXUNIT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="MODXMAST_TYPE" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="MODXMAST_TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODXCOMP_TYPE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODXCOMP_TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODXCOMP_FLAG" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODXCOMP_FLAG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="MODXDATE_OUT" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="MODXDATE_OUT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="MODXLINE_NO" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="MODXLINE_NO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="MODXLEAD_TIME" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="MODXLEAD_TIME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="MODXSPARE" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="MODXSPARE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="MODXUPDATE_COUNT" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="MODXUPDATE_COUNT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MODX1_CO_SITE, MODX1_REC_TYPE, MODX1_MAST_REF, MODX1_COMP_GROUP, MODX1_COMP_REF, MODX1_STAGE, MODX1_DATE_IN, MODX1_ITEM, MODX2_CO_SITE, MODX2_REC_TYPE, MODX2_COMP_REF, 
+                         MODX2_STAGE, MODX2_DATE_IN, MODX2_ITEM, MODX2_COMP_GROUP, MODX2_MAST_REF, MODX3_CO_SITE, MODX3_REC_TYPE, MODX3_COMP_GROUP, MODX3_COMP_REF, MODX3_STAGE, MODX3_DATE_IN, 
+                         MODX3_ITEM, MODX3_MAST_REF, MODX4_CO_SITE, MODX4_REC_TYPE, MODX4_MAST_REF, MODX4_COMP_GROUP, MODX4_STAGE, MODX4_DATE_IN, MODX4_ITEM, MODX4_COMP_REF, MODXUSAGE, 
+                         MODXUSAGE_ATTR, MODXUNIT, MODXMAST_TYPE, MODXCOMP_TYPE, MODXCOMP_FLAG, MODXDATE_OUT, MODXLINE_NO, MODXLEAD_TIME, MODXSPARE, MODXUPDATE_COUNT
+FROM            MTMS.MODX_DATA
+WHERE        (MODX1_CO_SITE = ?) AND (MODX1_MAST_REF = ?) AND (MODX1_COMP_GROUP = ?) AND (MODX1_COMP_REF = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="MODX1_CO_SITE" DataSourceName="MODX_DATA" DataTypeServer="CHAR" DbType="String" Direction="Input" ParameterName="MODX1_CO_SITE" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="MODX1_CO_SITE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="MODX1_MAST_REF" DataSourceName="MODX_DATA" DataTypeServer="CHAR" DbType="String" Direction="Input" ParameterName="MODX1_MAST_REF" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="MODX1_MAST_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="MODX1_COMP_GROUP" DataSourceName="MODX_DATA" DataTypeServer="CHAR" DbType="String" Direction="Input" ParameterName="MODX1_COMP_GROUP" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="MODX1_COMP_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="MODX1_COMP_REF" DataSourceName="MODX_DATA" DataTypeServer="CHAR" DbType="String" Direction="Input" ParameterName="MODX1_COMP_REF" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="MODX1_COMP_REF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MODX1_CO_SITE" DataSetColumn="MODX1_CO_SITE" />
+              <Mapping SourceColumn="MODX1_REC_TYPE" DataSetColumn="MODX1_REC_TYPE" />
+              <Mapping SourceColumn="MODX1_MAST_REF" DataSetColumn="MODX1_MAST_REF" />
+              <Mapping SourceColumn="MODX1_COMP_GROUP" DataSetColumn="MODX1_COMP_GROUP" />
+              <Mapping SourceColumn="MODX1_COMP_REF" DataSetColumn="MODX1_COMP_REF" />
+              <Mapping SourceColumn="MODX1_STAGE" DataSetColumn="MODX1_STAGE" />
+              <Mapping SourceColumn="MODX1_DATE_IN" DataSetColumn="MODX1_DATE_IN" />
+              <Mapping SourceColumn="MODX1_ITEM" DataSetColumn="MODX1_ITEM" />
+              <Mapping SourceColumn="MODX2_CO_SITE" DataSetColumn="MODX2_CO_SITE" />
+              <Mapping SourceColumn="MODX2_REC_TYPE" DataSetColumn="MODX2_REC_TYPE" />
+              <Mapping SourceColumn="MODX2_COMP_REF" DataSetColumn="MODX2_COMP_REF" />
+              <Mapping SourceColumn="MODX2_STAGE" DataSetColumn="MODX2_STAGE" />
+              <Mapping SourceColumn="MODX2_DATE_IN" DataSetColumn="MODX2_DATE_IN" />
+              <Mapping SourceColumn="MODX2_ITEM" DataSetColumn="MODX2_ITEM" />
+              <Mapping SourceColumn="MODX2_COMP_GROUP" DataSetColumn="MODX2_COMP_GROUP" />
+              <Mapping SourceColumn="MODX2_MAST_REF" DataSetColumn="MODX2_MAST_REF" />
+              <Mapping SourceColumn="MODX3_CO_SITE" DataSetColumn="MODX3_CO_SITE" />
+              <Mapping SourceColumn="MODX3_REC_TYPE" DataSetColumn="MODX3_REC_TYPE" />
+              <Mapping SourceColumn="MODX3_COMP_GROUP" DataSetColumn="MODX3_COMP_GROUP" />
+              <Mapping SourceColumn="MODX3_COMP_REF" DataSetColumn="MODX3_COMP_REF" />
+              <Mapping SourceColumn="MODX3_STAGE" DataSetColumn="MODX3_STAGE" />
+              <Mapping SourceColumn="MODX3_DATE_IN" DataSetColumn="MODX3_DATE_IN" />
+              <Mapping SourceColumn="MODX3_ITEM" DataSetColumn="MODX3_ITEM" />
+              <Mapping SourceColumn="MODX3_MAST_REF" DataSetColumn="MODX3_MAST_REF" />
+              <Mapping SourceColumn="MODX4_CO_SITE" DataSetColumn="MODX4_CO_SITE" />
+              <Mapping SourceColumn="MODX4_REC_TYPE" DataSetColumn="MODX4_REC_TYPE" />
+              <Mapping SourceColumn="MODX4_MAST_REF" DataSetColumn="MODX4_MAST_REF" />
+              <Mapping SourceColumn="MODX4_COMP_GROUP" DataSetColumn="MODX4_COMP_GROUP" />
+              <Mapping SourceColumn="MODX4_STAGE" DataSetColumn="MODX4_STAGE" />
+              <Mapping SourceColumn="MODX4_DATE_IN" DataSetColumn="MODX4_DATE_IN" />
+              <Mapping SourceColumn="MODX4_ITEM" DataSetColumn="MODX4_ITEM" />
+              <Mapping SourceColumn="MODX4_COMP_REF" DataSetColumn="MODX4_COMP_REF" />
+              <Mapping SourceColumn="MODXUSAGE" DataSetColumn="MODXUSAGE" />
+              <Mapping SourceColumn="MODXUSAGE_ATTR" DataSetColumn="MODXUSAGE_ATTR" />
+              <Mapping SourceColumn="MODXUNIT" DataSetColumn="MODXUNIT" />
+              <Mapping SourceColumn="MODXMAST_TYPE" DataSetColumn="MODXMAST_TYPE" />
+              <Mapping SourceColumn="MODXCOMP_TYPE" DataSetColumn="MODXCOMP_TYPE" />
+              <Mapping SourceColumn="MODXCOMP_FLAG" DataSetColumn="MODXCOMP_FLAG" />
+              <Mapping SourceColumn="MODXDATE_OUT" DataSetColumn="MODXDATE_OUT" />
+              <Mapping SourceColumn="MODXLINE_NO" DataSetColumn="MODXLINE_NO" />
+              <Mapping SourceColumn="MODXLEAD_TIME" DataSetColumn="MODXLEAD_TIME" />
+              <Mapping SourceColumn="MODXSPARE" DataSetColumn="MODXSPARE" />
+              <Mapping SourceColumn="MODXUPDATE_COUNT" DataSetColumn="MODXUPDATE_COUNT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="mTMS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="mTMS" msprop:Generator_UserDSName="mTMS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PART_DATA" msprop:Generator_TableClassName="PART_DATADataTable" msprop:Generator_TableVarName="tablePART_DATA" msprop:Generator_RowChangedName="PART_DATARowChanged" msprop:Generator_TablePropName="PART_DATA" msprop:Generator_RowDeletingName="PART_DATARowDeleting" msprop:Generator_RowChangingName="PART_DATARowChanging" msprop:Generator_RowEvHandlerName="PART_DATARowChangeEventHandler" msprop:Generator_RowDeletedName="PART_DATARowDeleted" msprop:Generator_RowClassName="PART_DATARow" msprop:Generator_UserTableName="PART_DATA" msprop:Generator_RowEvArgName="PART_DATARowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PART1_CO_SITE" msprop:Generator_ColumnVarNameInTable="columnPART1_CO_SITE" msprop:Generator_ColumnPropNameInRow="PART1_CO_SITE" msprop:Generator_ColumnPropNameInTable="PART1_CO_SITEColumn" msprop:Generator_UserColumnName="PART1_CO_SITE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PART1_REC_TYPE" msprop:Generator_ColumnVarNameInTable="columnPART1_REC_TYPE" msprop:Generator_ColumnPropNameInRow="PART1_REC_TYPE" msprop:Generator_ColumnPropNameInTable="PART1_REC_TYPEColumn" msprop:Generator_UserColumnName="PART1_REC_TYPE" type="xs:double" />
+              <xs:element name="PART1_PART" msprop:Generator_ColumnVarNameInTable="columnPART1_PART" msprop:Generator_ColumnPropNameInRow="PART1_PART" msprop:Generator_ColumnPropNameInTable="PART1_PARTColumn" msprop:Generator_UserColumnName="PART1_PART">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PART2_CO_SITE" msprop:Generator_ColumnVarNameInTable="columnPART2_CO_SITE" msprop:Generator_ColumnPropNameInRow="PART2_CO_SITE" msprop:Generator_ColumnPropNameInTable="PART2_CO_SITEColumn" msprop:Generator_UserColumnName="PART2_CO_SITE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PART2_REC_TYPE" msprop:Generator_ColumnVarNameInTable="columnPART2_REC_TYPE" msprop:Generator_ColumnPropNameInRow="PART2_REC_TYPE" msprop:Generator_ColumnPropNameInTable="PART2_REC_TYPEColumn" msprop:Generator_UserColumnName="PART2_REC_TYPE" type="xs:double" minOccurs="0" />
+              <xs:element name="PART2_XREF" msprop:Generator_ColumnVarNameInTable="columnPART2_XREF" msprop:Generator_ColumnPropNameInRow="PART2_XREF" msprop:Generator_ColumnPropNameInTable="PART2_XREFColumn" msprop:Generator_UserColumnName="PART2_XREF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PART2_PART" msprop:Generator_ColumnVarNameInTable="columnPART2_PART" msprop:Generator_ColumnPropNameInRow="PART2_PART" msprop:Generator_ColumnPropNameInTable="PART2_PARTColumn" msprop:Generator_UserColumnName="PART2_PART" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTCOMMODITY" msprop:Generator_ColumnVarNameInTable="columnPARTCOMMODITY" msprop:Generator_ColumnPropNameInRow="PARTCOMMODITY" msprop:Generator_ColumnPropNameInTable="PARTCOMMODITYColumn" msprop:Generator_UserColumnName="PARTCOMMODITY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTPROD_GROUP" msprop:Generator_ColumnVarNameInTable="columnPARTPROD_GROUP" msprop:Generator_ColumnPropNameInRow="PARTPROD_GROUP" msprop:Generator_ColumnPropNameInTable="PARTPROD_GROUPColumn" msprop:Generator_UserColumnName="PARTPROD_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTSALES_GROUP" msprop:Generator_ColumnVarNameInTable="columnPARTSALES_GROUP" msprop:Generator_ColumnPropNameInRow="PARTSALES_GROUP" msprop:Generator_ColumnPropNameInTable="PARTSALES_GROUPColumn" msprop:Generator_UserColumnName="PARTSALES_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTCOST_CENTRE" msprop:Generator_ColumnVarNameInTable="columnPARTCOST_CENTRE" msprop:Generator_ColumnPropNameInRow="PARTCOST_CENTRE" msprop:Generator_ColumnPropNameInTable="PARTCOST_CENTREColumn" msprop:Generator_UserColumnName="PARTCOST_CENTRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTCONTRACT" msprop:Generator_ColumnVarNameInTable="columnPARTCONTRACT" msprop:Generator_ColumnPropNameInRow="PARTCONTRACT" msprop:Generator_ColumnPropNameInTable="PARTCONTRACTColumn" msprop:Generator_UserColumnName="PARTCONTRACT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTCONTRACT_FLG" msprop:Generator_ColumnVarNameInTable="columnPARTCONTRACT_FLG" msprop:Generator_ColumnPropNameInRow="PARTCONTRACT_FLG" msprop:Generator_ColumnPropNameInTable="PARTCONTRACT_FLGColumn" msprop:Generator_UserColumnName="PARTCONTRACT_FLG" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTDESC" msprop:Generator_ColumnVarNameInTable="columnPARTDESC" msprop:Generator_ColumnPropNameInRow="PARTDESC" msprop:Generator_ColumnPropNameInTable="PARTDESCColumn" msprop:Generator_UserColumnName="PARTDESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTSERIAL_NO" msprop:Generator_ColumnVarNameInTable="columnPARTSERIAL_NO" msprop:Generator_ColumnPropNameInRow="PARTSERIAL_NO" msprop:Generator_ColumnPropNameInTable="PARTSERIAL_NOColumn" msprop:Generator_UserColumnName="PARTSERIAL_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTDRAWING_NO" msprop:Generator_ColumnVarNameInTable="columnPARTDRAWING_NO" msprop:Generator_ColumnPropNameInRow="PARTDRAWING_NO" msprop:Generator_ColumnPropNameInTable="PARTDRAWING_NOColumn" msprop:Generator_UserColumnName="PARTDRAWING_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTTYPE" msprop:Generator_ColumnVarNameInTable="columnPARTTYPE" msprop:Generator_ColumnPropNameInRow="PARTTYPE" msprop:Generator_ColumnPropNameInTable="PARTTYPEColumn" msprop:Generator_UserColumnName="PARTTYPE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTPHANTOM" msprop:Generator_ColumnVarNameInTable="columnPARTPHANTOM" msprop:Generator_ColumnPropNameInRow="PARTPHANTOM" msprop:Generator_ColumnPropNameInTable="PARTPHANTOMColumn" msprop:Generator_UserColumnName="PARTPHANTOM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTCATALOGUE" msprop:Generator_ColumnVarNameInTable="columnPARTCATALOGUE" msprop:Generator_ColumnPropNameInRow="PARTCATALOGUE" msprop:Generator_ColumnPropNameInTable="PARTCATALOGUEColumn" msprop:Generator_UserColumnName="PARTCATALOGUE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTAUTO_PROMISE" msprop:Generator_ColumnVarNameInTable="columnPARTAUTO_PROMISE" msprop:Generator_ColumnPropNameInRow="PARTAUTO_PROMISE" msprop:Generator_ColumnPropNameInTable="PARTAUTO_PROMISEColumn" msprop:Generator_UserColumnName="PARTAUTO_PROMISE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTKEY_PART" msprop:Generator_ColumnVarNameInTable="columnPARTKEY_PART" msprop:Generator_ColumnPropNameInRow="PARTKEY_PART" msprop:Generator_ColumnPropNameInTable="PARTKEY_PARTColumn" msprop:Generator_UserColumnName="PARTKEY_PART" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTLOW_LEV" msprop:Generator_ColumnVarNameInTable="columnPARTLOW_LEV" msprop:Generator_ColumnPropNameInRow="PARTLOW_LEV" msprop:Generator_ColumnPropNameInTable="PARTLOW_LEVColumn" msprop:Generator_UserColumnName="PARTLOW_LEV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTEXPLODE_STOP" msprop:Generator_ColumnVarNameInTable="columnPARTEXPLODE_STOP" msprop:Generator_ColumnPropNameInRow="PARTEXPLODE_STOP" msprop:Generator_ColumnPropNameInTable="PARTEXPLODE_STOPColumn" msprop:Generator_UserColumnName="PARTEXPLODE_STOP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTMPS_MASTER" msprop:Generator_ColumnVarNameInTable="columnPARTMPS_MASTER" msprop:Generator_ColumnPropNameInRow="PARTMPS_MASTER" msprop:Generator_ColumnPropNameInTable="PARTMPS_MASTERColumn" msprop:Generator_UserColumnName="PARTMPS_MASTER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTPROJ_BAL_IND" msprop:Generator_ColumnVarNameInTable="columnPARTPROJ_BAL_IND" msprop:Generator_ColumnPropNameInRow="PARTPROJ_BAL_IND" msprop:Generator_ColumnPropNameInTable="PARTPROJ_BAL_INDColumn" msprop:Generator_UserColumnName="PARTPROJ_BAL_IND" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSTD_SOURCE" msprop:Generator_ColumnVarNameInTable="columnPARTSTD_SOURCE" msprop:Generator_ColumnPropNameInRow="PARTSTD_SOURCE" msprop:Generator_ColumnPropNameInTable="PARTSTD_SOURCEColumn" msprop:Generator_UserColumnName="PARTSTD_SOURCE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTOBS_CODE" msprop:Generator_ColumnVarNameInTable="columnPARTOBS_CODE" msprop:Generator_ColumnPropNameInRow="PARTOBS_CODE" msprop:Generator_ColumnPropNameInTable="PARTOBS_CODEColumn" msprop:Generator_UserColumnName="PARTOBS_CODE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTOBS_DATE" msprop:Generator_ColumnVarNameInTable="columnPARTOBS_DATE" msprop:Generator_ColumnPropNameInRow="PARTOBS_DATE" msprop:Generator_ColumnPropNameInTable="PARTOBS_DATEColumn" msprop:Generator_UserColumnName="PARTOBS_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTOBS_SERIAL" msprop:Generator_ColumnVarNameInTable="columnPARTOBS_SERIAL" msprop:Generator_ColumnPropNameInRow="PARTOBS_SERIAL" msprop:Generator_ColumnPropNameInTable="PARTOBS_SERIALColumn" msprop:Generator_UserColumnName="PARTOBS_SERIAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTREPLACE_PART" msprop:Generator_ColumnVarNameInTable="columnPARTREPLACE_PART" msprop:Generator_ColumnPropNameInRow="PARTREPLACE_PART" msprop:Generator_ColumnPropNameInTable="PARTREPLACE_PARTColumn" msprop:Generator_UserColumnName="PARTREPLACE_PART" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTALT_PART_1" msprop:Generator_ColumnVarNameInTable="columnPARTALT_PART_1" msprop:Generator_ColumnPropNameInRow="PARTALT_PART_1" msprop:Generator_ColumnPropNameInTable="PARTALT_PART_1Column" msprop:Generator_UserColumnName="PARTALT_PART_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTALT_PART_2" msprop:Generator_ColumnVarNameInTable="columnPARTALT_PART_2" msprop:Generator_ColumnPropNameInRow="PARTALT_PART_2" msprop:Generator_ColumnPropNameInTable="PARTALT_PART_2Column" msprop:Generator_UserColumnName="PARTALT_PART_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDATE_L_ACT" msprop:Generator_ColumnVarNameInTable="columnPARTDATE_L_ACT" msprop:Generator_ColumnPropNameInRow="PARTDATE_L_ACT" msprop:Generator_ColumnPropNameInTable="PARTDATE_L_ACTColumn" msprop:Generator_UserColumnName="PARTDATE_L_ACT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTDATE_CREATED" msprop:Generator_ColumnVarNameInTable="columnPARTDATE_CREATED" msprop:Generator_ColumnPropNameInRow="PARTDATE_CREATED" msprop:Generator_ColumnPropNameInTable="PARTDATE_CREATEDColumn" msprop:Generator_UserColumnName="PARTDATE_CREATED" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTPERIOD" msprop:Generator_ColumnVarNameInTable="columnPARTPERIOD" msprop:Generator_ColumnPropNameInRow="PARTPERIOD" msprop:Generator_ColumnPropNameInTable="PARTPERIODColumn" msprop:Generator_UserColumnName="PARTPERIOD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSYNC_PERIOD" msprop:Generator_ColumnVarNameInTable="columnPARTSYNC_PERIOD" msprop:Generator_ColumnPropNameInRow="PARTSYNC_PERIOD" msprop:Generator_ColumnPropNameInTable="PARTSYNC_PERIODColumn" msprop:Generator_UserColumnName="PARTSYNC_PERIOD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSYNC_START" msprop:Generator_ColumnVarNameInTable="columnPARTSYNC_START" msprop:Generator_ColumnPropNameInRow="PARTSYNC_START" msprop:Generator_ColumnPropNameInTable="PARTSYNC_STARTColumn" msprop:Generator_UserColumnName="PARTSYNC_START" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTDEM_TIMFENCE" msprop:Generator_ColumnVarNameInTable="columnPARTDEM_TIMFENCE" msprop:Generator_ColumnPropNameInRow="PARTDEM_TIMFENCE" msprop:Generator_ColumnPropNameInTable="PARTDEM_TIMFENCEColumn" msprop:Generator_UserColumnName="PARTDEM_TIMFENCE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTPLAN_TIMFENC" msprop:Generator_ColumnVarNameInTable="columnPARTPLAN_TIMFENC" msprop:Generator_ColumnPropNameInRow="PARTPLAN_TIMFENC" msprop:Generator_ColumnPropNameInTable="PARTPLAN_TIMFENCColumn" msprop:Generator_UserColumnName="PARTPLAN_TIMFENC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTAGGRO_LEAD" msprop:Generator_ColumnVarNameInTable="columnPARTAGGRO_LEAD" msprop:Generator_ColumnPropNameInRow="PARTAGGRO_LEAD" msprop:Generator_ColumnPropNameInTable="PARTAGGRO_LEADColumn" msprop:Generator_UserColumnName="PARTAGGRO_LEAD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTDAY_DEMAND" msprop:Generator_ColumnVarNameInTable="columnPARTDAY_DEMAND" msprop:Generator_ColumnPropNameInRow="PARTDAY_DEMAND" msprop:Generator_ColumnPropNameInTable="PARTDAY_DEMANDColumn" msprop:Generator_UserColumnName="PARTDAY_DEMAND" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTPERD_IN_DAYS" msprop:Generator_ColumnVarNameInTable="columnPARTPERD_IN_DAYS" msprop:Generator_ColumnPropNameInRow="PARTPERD_IN_DAYS" msprop:Generator_ColumnPropNameInTable="PARTPERD_IN_DAYSColumn" msprop:Generator_UserColumnName="PARTPERD_IN_DAYS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTANALY_CODE1" msprop:Generator_ColumnVarNameInTable="columnPARTANALY_CODE1" msprop:Generator_ColumnPropNameInRow="PARTANALY_CODE1" msprop:Generator_ColumnPropNameInTable="PARTANALY_CODE1Column" msprop:Generator_UserColumnName="PARTANALY_CODE1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTANALY_CODE2" msprop:Generator_ColumnVarNameInTable="columnPARTANALY_CODE2" msprop:Generator_ColumnPropNameInRow="PARTANALY_CODE2" msprop:Generator_ColumnPropNameInTable="PARTANALY_CODE2Column" msprop:Generator_UserColumnName="PARTANALY_CODE2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTANALY_CODE3" msprop:Generator_ColumnVarNameInTable="columnPARTANALY_CODE3" msprop:Generator_ColumnPropNameInRow="PARTANALY_CODE3" msprop:Generator_ColumnPropNameInTable="PARTANALY_CODE3Column" msprop:Generator_UserColumnName="PARTANALY_CODE3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTANALY_CODE4" msprop:Generator_ColumnVarNameInTable="columnPARTANALY_CODE4" msprop:Generator_ColumnPropNameInRow="PARTANALY_CODE4" msprop:Generator_ColumnPropNameInTable="PARTANALY_CODE4Column" msprop:Generator_UserColumnName="PARTANALY_CODE4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTMODEL" msprop:Generator_ColumnVarNameInTable="columnPARTMODEL" msprop:Generator_ColumnPropNameInRow="PARTMODEL" msprop:Generator_ColumnPropNameInTable="PARTMODELColumn" msprop:Generator_UserColumnName="PARTMODEL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTVARIANT" msprop:Generator_ColumnVarNameInTable="columnPARTVARIANT" msprop:Generator_ColumnPropNameInRow="PARTVARIANT" msprop:Generator_ColumnPropNameInTable="PARTVARIANTColumn" msprop:Generator_UserColumnName="PARTVARIANT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTECN_ISS_DATE" msprop:Generator_ColumnVarNameInTable="columnPARTECN_ISS_DATE" msprop:Generator_ColumnPropNameInRow="PARTECN_ISS_DATE" msprop:Generator_ColumnPropNameInTable="PARTECN_ISS_DATEColumn" msprop:Generator_UserColumnName="PARTECN_ISS_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTECN_EFF_DATE" msprop:Generator_ColumnVarNameInTable="columnPARTECN_EFF_DATE" msprop:Generator_ColumnPropNameInRow="PARTECN_EFF_DATE" msprop:Generator_ColumnPropNameInTable="PARTECN_EFF_DATEColumn" msprop:Generator_UserColumnName="PARTECN_EFF_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTECN_REQUEST" msprop:Generator_ColumnVarNameInTable="columnPARTECN_REQUEST" msprop:Generator_ColumnPropNameInRow="PARTECN_REQUEST" msprop:Generator_ColumnPropNameInTable="PARTECN_REQUESTColumn" msprop:Generator_UserColumnName="PARTECN_REQUEST" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTCLASS" msprop:Generator_ColumnVarNameInTable="columnPARTCLASS" msprop:Generator_ColumnPropNameInRow="PARTCLASS" msprop:Generator_ColumnPropNameInTable="PARTCLASSColumn" msprop:Generator_UserColumnName="PARTCLASS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTSALES_BLOCK" msprop:Generator_ColumnVarNameInTable="columnPARTSALES_BLOCK" msprop:Generator_ColumnPropNameInRow="PARTSALES_BLOCK" msprop:Generator_ColumnPropNameInTable="PARTSALES_BLOCKColumn" msprop:Generator_UserColumnName="PARTSALES_BLOCK" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSALES_STATS" msprop:Generator_ColumnVarNameInTable="columnPARTSALES_STATS" msprop:Generator_ColumnPropNameInRow="PARTSALES_STATS" msprop:Generator_ColumnPropNameInTable="PARTSALES_STATSColumn" msprop:Generator_UserColumnName="PARTSALES_STATS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSALES_SER_NO" msprop:Generator_ColumnVarNameInTable="columnPARTSALES_SER_NO" msprop:Generator_ColumnPropNameInRow="PARTSALES_SER_NO" msprop:Generator_ColumnPropNameInTable="PARTSALES_SER_NOColumn" msprop:Generator_UserColumnName="PARTSALES_SER_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTLOT_TRACE" msprop:Generator_ColumnVarNameInTable="columnPARTLOT_TRACE" msprop:Generator_ColumnPropNameInRow="PARTLOT_TRACE" msprop:Generator_ColumnPropNameInTable="PARTLOT_TRACEColumn" msprop:Generator_UserColumnName="PARTLOT_TRACE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTNO_BULK_ORDS" msprop:Generator_ColumnVarNameInTable="columnPARTNO_BULK_ORDS" msprop:Generator_ColumnPropNameInRow="PARTNO_BULK_ORDS" msprop:Generator_ColumnPropNameInTable="PARTNO_BULK_ORDSColumn" msprop:Generator_UserColumnName="PARTNO_BULK_ORDS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTPA_CODE" msprop:Generator_ColumnVarNameInTable="columnPARTPA_CODE" msprop:Generator_ColumnPropNameInRow="PARTPA_CODE" msprop:Generator_ColumnPropNameInTable="PARTPA_CODEColumn" msprop:Generator_UserColumnName="PARTPA_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTABC_CLASS" msprop:Generator_ColumnVarNameInTable="columnPARTABC_CLASS" msprop:Generator_ColumnPropNameInRow="PARTABC_CLASS" msprop:Generator_ColumnPropNameInTable="PARTABC_CLASSColumn" msprop:Generator_UserColumnName="PARTABC_CLASS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDATE_PA_CHK" msprop:Generator_ColumnVarNameInTable="columnPARTDATE_PA_CHK" msprop:Generator_ColumnPropNameInRow="PARTDATE_PA_CHK" msprop:Generator_ColumnPropNameInTable="PARTDATE_PA_CHKColumn" msprop:Generator_UserColumnName="PARTDATE_PA_CHK" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTFIFO_DATE" msprop:Generator_ColumnVarNameInTable="columnPARTFIFO_DATE" msprop:Generator_ColumnPropNameInRow="PARTFIFO_DATE" msprop:Generator_ColumnPropNameInTable="PARTFIFO_DATEColumn" msprop:Generator_UserColumnName="PARTFIFO_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTFIFO_TIME" msprop:Generator_ColumnVarNameInTable="columnPARTFIFO_TIME" msprop:Generator_ColumnPropNameInRow="PARTFIFO_TIME" msprop:Generator_ColumnPropNameInTable="PARTFIFO_TIMEColumn" msprop:Generator_UserColumnName="PARTFIFO_TIME" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTRATE_SCRAP" msprop:Generator_ColumnVarNameInTable="columnPARTRATE_SCRAP" msprop:Generator_ColumnPropNameInRow="PARTRATE_SCRAP" msprop:Generator_ColumnPropNameInTable="PARTRATE_SCRAPColumn" msprop:Generator_UserColumnName="PARTRATE_SCRAP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_SCRAP" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_SCRAP" msprop:Generator_ColumnPropNameInRow="PARTQTY_SCRAP" msprop:Generator_ColumnPropNameInTable="PARTQTY_SCRAPColumn" msprop:Generator_UserColumnName="PARTQTY_SCRAP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSHELF_LIFE" msprop:Generator_ColumnVarNameInTable="columnPARTSHELF_LIFE" msprop:Generator_ColumnPropNameInRow="PARTSHELF_LIFE" msprop:Generator_ColumnPropNameInTable="PARTSHELF_LIFEColumn" msprop:Generator_UserColumnName="PARTSHELF_LIFE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTLEAD_TIME" msprop:Generator_ColumnVarNameInTable="columnPARTLEAD_TIME" msprop:Generator_ColumnPropNameInRow="PARTLEAD_TIME" msprop:Generator_ColumnPropNameInTable="PARTLEAD_TIMEColumn" msprop:Generator_UserColumnName="PARTLEAD_TIME" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQUOTED_LEAD" msprop:Generator_ColumnVarNameInTable="columnPARTQUOTED_LEAD" msprop:Generator_ColumnPropNameInRow="PARTQUOTED_LEAD" msprop:Generator_ColumnPropNameInTable="PARTQUOTED_LEADColumn" msprop:Generator_UserColumnName="PARTQUOTED_LEAD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTINSPECT_LEAD" msprop:Generator_ColumnVarNameInTable="columnPARTINSPECT_LEAD" msprop:Generator_ColumnPropNameInRow="PARTINSPECT_LEAD" msprop:Generator_ColumnPropNameInTable="PARTINSPECT_LEADColumn" msprop:Generator_UserColumnName="PARTINSPECT_LEAD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTDESP_LTIME" msprop:Generator_ColumnVarNameInTable="columnPARTDESP_LTIME" msprop:Generator_ColumnPropNameInRow="PARTDESP_LTIME" msprop:Generator_ColumnPropNameInTable="PARTDESP_LTIMEColumn" msprop:Generator_UserColumnName="PARTDESP_LTIME" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTPROCESS_LEAD" msprop:Generator_ColumnVarNameInTable="columnPARTPROCESS_LEAD" msprop:Generator_ColumnPropNameInRow="PARTPROCESS_LEAD" msprop:Generator_ColumnPropNameInTable="PARTPROCESS_LEADColumn" msprop:Generator_UserColumnName="PARTPROCESS_LEAD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTCALLOFF_LEAD" msprop:Generator_ColumnVarNameInTable="columnPARTCALLOFF_LEAD" msprop:Generator_ColumnPropNameInRow="PARTCALLOFF_LEAD" msprop:Generator_ColumnPropNameInTable="PARTCALLOFF_LEADColumn" msprop:Generator_UserColumnName="PARTCALLOFF_LEAD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTBULK_ISS" msprop:Generator_ColumnVarNameInTable="columnPARTBULK_ISS" msprop:Generator_ColumnPropNameInRow="PARTBULK_ISS" msprop:Generator_ColumnPropNameInTable="PARTBULK_ISSColumn" msprop:Generator_UserColumnName="PARTBULK_ISS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTBULK_QTY" msprop:Generator_ColumnVarNameInTable="columnPARTBULK_QTY" msprop:Generator_ColumnPropNameInRow="PARTBULK_QTY" msprop:Generator_ColumnPropNameInTable="PARTBULK_QTYColumn" msprop:Generator_UserColumnName="PARTBULK_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTBULK_DAYS" msprop:Generator_ColumnVarNameInTable="columnPARTBULK_DAYS" msprop:Generator_ColumnPropNameInRow="PARTBULK_DAYS" msprop:Generator_ColumnPropNameInTable="PARTBULK_DAYSColumn" msprop:Generator_UserColumnName="PARTBULK_DAYS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTNO_WU" msprop:Generator_ColumnVarNameInTable="columnPARTNO_WU" msprop:Generator_ColumnPropNameInRow="PARTNO_WU" msprop:Generator_ColumnPropNameInTable="PARTNO_WUColumn" msprop:Generator_UserColumnName="PARTNO_WU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORD_POLICY" msprop:Generator_ColumnVarNameInTable="columnPARTORD_POLICY" msprop:Generator_ColumnPropNameInRow="PARTORD_POLICY" msprop:Generator_ColumnPropNameInTable="PARTORD_POLICYColumn" msprop:Generator_UserColumnName="PARTORD_POLICY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORDER_COST" msprop:Generator_ColumnVarNameInTable="columnPARTORDER_COST" msprop:Generator_ColumnPropNameInRow="PARTORDER_COST" msprop:Generator_ColumnPropNameInTable="PARTORDER_COSTColumn" msprop:Generator_UserColumnName="PARTORDER_COST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTPEGGING_FLAG" msprop:Generator_ColumnVarNameInTable="columnPARTPEGGING_FLAG" msprop:Generator_ColumnPropNameInRow="PARTPEGGING_FLAG" msprop:Generator_ColumnPropNameInTable="PARTPEGGING_FLAGColumn" msprop:Generator_UserColumnName="PARTPEGGING_FLAG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTORDER_MULT" msprop:Generator_ColumnVarNameInTable="columnPARTORDER_MULT" msprop:Generator_ColumnPropNameInRow="PARTORDER_MULT" msprop:Generator_ColumnPropNameInTable="PARTORDER_MULTColumn" msprop:Generator_UserColumnName="PARTORDER_MULT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTISSUE_ROUND" msprop:Generator_ColumnVarNameInTable="columnPARTISSUE_ROUND" msprop:Generator_ColumnPropNameInRow="PARTISSUE_ROUND" msprop:Generator_ColumnPropNameInTable="PARTISSUE_ROUNDColumn" msprop:Generator_UserColumnName="PARTISSUE_ROUND" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORD_ROUND" msprop:Generator_ColumnVarNameInTable="columnPARTORD_ROUND" msprop:Generator_ColumnPropNameInRow="PARTORD_ROUND" msprop:Generator_ColumnPropNameInTable="PARTORD_ROUNDColumn" msprop:Generator_UserColumnName="PARTORD_ROUND" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSTD_BATCH" msprop:Generator_ColumnVarNameInTable="columnPARTSTD_BATCH" msprop:Generator_ColumnPropNameInRow="PARTSTD_BATCH" msprop:Generator_ColumnPropNameInTable="PARTSTD_BATCHColumn" msprop:Generator_UserColumnName="PARTSTD_BATCH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTCOST_BATCH" msprop:Generator_ColumnVarNameInTable="columnPARTCOST_BATCH" msprop:Generator_ColumnPropNameInRow="PARTCOST_BATCH" msprop:Generator_ColumnPropNameInTable="PARTCOST_BATCHColumn" msprop:Generator_UserColumnName="PARTCOST_BATCH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTCOMP_BATCH" msprop:Generator_ColumnVarNameInTable="columnPARTCOMP_BATCH" msprop:Generator_ColumnPropNameInRow="PARTCOMP_BATCH" msprop:Generator_ColumnPropNameInTable="PARTCOMP_BATCHColumn" msprop:Generator_UserColumnName="PARTCOMP_BATCH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTOPER_BATCH" msprop:Generator_ColumnVarNameInTable="columnPARTOPER_BATCH" msprop:Generator_ColumnPropNameInRow="PARTOPER_BATCH" msprop:Generator_ColumnPropNameInTable="PARTOPER_BATCHColumn" msprop:Generator_UserColumnName="PARTOPER_BATCH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTMIN_BATCH" msprop:Generator_ColumnVarNameInTable="columnPARTMIN_BATCH" msprop:Generator_ColumnPropNameInRow="PARTMIN_BATCH" msprop:Generator_ColumnPropNameInTable="PARTMIN_BATCHColumn" msprop:Generator_UserColumnName="PARTMIN_BATCH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTMAX_BATCH" msprop:Generator_ColumnVarNameInTable="columnPARTMAX_BATCH" msprop:Generator_ColumnPropNameInRow="PARTMAX_BATCH" msprop:Generator_ColumnPropNameInTable="PARTMAX_BATCHColumn" msprop:Generator_UserColumnName="PARTMAX_BATCH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTREORD_LEVEL" msprop:Generator_ColumnVarNameInTable="columnPARTREORD_LEVEL" msprop:Generator_ColumnPropNameInRow="PARTREORD_LEVEL" msprop:Generator_ColumnPropNameInTable="PARTREORD_LEVELColumn" msprop:Generator_UserColumnName="PARTREORD_LEVEL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTMIN_STOCK" msprop:Generator_ColumnVarNameInTable="columnPARTMIN_STOCK" msprop:Generator_ColumnPropNameInRow="PARTMIN_STOCK" msprop:Generator_ColumnPropNameInTable="PARTMIN_STOCKColumn" msprop:Generator_UserColumnName="PARTMIN_STOCK" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTMAX_STOCK" msprop:Generator_ColumnVarNameInTable="columnPARTMAX_STOCK" msprop:Generator_ColumnPropNameInRow="PARTMAX_STOCK" msprop:Generator_ColumnPropNameInTable="PARTMAX_STOCKColumn" msprop:Generator_UserColumnName="PARTMAX_STOCK" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTROQ" msprop:Generator_ColumnVarNameInTable="columnPARTROQ" msprop:Generator_ColumnPropNameInRow="PARTROQ" msprop:Generator_ColumnPropNameInTable="PARTROQColumn" msprop:Generator_UserColumnName="PARTROQ" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTMIN_DAYS_SUP" msprop:Generator_ColumnVarNameInTable="columnPARTMIN_DAYS_SUP" msprop:Generator_ColumnPropNameInRow="PARTMIN_DAYS_SUP" msprop:Generator_ColumnPropNameInTable="PARTMIN_DAYS_SUPColumn" msprop:Generator_UserColumnName="PARTMIN_DAYS_SUP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTPROD_RATE" msprop:Generator_ColumnVarNameInTable="columnPARTPROD_RATE" msprop:Generator_ColumnPropNameInRow="PARTPROD_RATE" msprop:Generator_ColumnPropNameInTable="PARTPROD_RATEColumn" msprop:Generator_UserColumnName="PARTPROD_RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTPROD_PERIOD" msprop:Generator_ColumnVarNameInTable="columnPARTPROD_PERIOD" msprop:Generator_ColumnPropNameInRow="PARTPROD_PERIOD" msprop:Generator_ColumnPropNameInTable="PARTPROD_PERIODColumn" msprop:Generator_UserColumnName="PARTPROD_PERIOD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSALESMAN" msprop:Generator_ColumnVarNameInTable="columnPARTSALESMAN" msprop:Generator_ColumnPropNameInRow="PARTSALESMAN" msprop:Generator_ColumnPropNameInTable="PARTSALESMANColumn" msprop:Generator_UserColumnName="PARTSALESMAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTPLANNER" msprop:Generator_ColumnVarNameInTable="columnPARTPLANNER" msprop:Generator_ColumnPropNameInRow="PARTPLANNER" msprop:Generator_ColumnPropNameInTable="PARTPLANNERColumn" msprop:Generator_UserColumnName="PARTPLANNER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTBUYER" msprop:Generator_ColumnVarNameInTable="columnPARTBUYER" msprop:Generator_ColumnPropNameInRow="PARTBUYER" msprop:Generator_ColumnPropNameInTable="PARTBUYERColumn" msprop:Generator_UserColumnName="PARTBUYER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTTIME_BUCKET" msprop:Generator_ColumnVarNameInTable="columnPARTTIME_BUCKET" msprop:Generator_ColumnPropNameInRow="PARTTIME_BUCKET" msprop:Generator_ColumnPropNameInTable="PARTTIME_BUCKETColumn" msprop:Generator_UserColumnName="PARTTIME_BUCKET" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDEF_STORE" msprop:Generator_ColumnVarNameInTable="columnPARTDEF_STORE" msprop:Generator_ColumnPropNameInRow="PARTDEF_STORE" msprop:Generator_ColumnPropNameInTable="PARTDEF_STOREColumn" msprop:Generator_UserColumnName="PARTDEF_STORE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDEF_BIN" msprop:Generator_ColumnVarNameInTable="columnPARTDEF_BIN" msprop:Generator_ColumnPropNameInRow="PARTDEF_BIN" msprop:Generator_ColumnPropNameInTable="PARTDEF_BINColumn" msprop:Generator_UserColumnName="PARTDEF_BIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDEF_VAT_CODE" msprop:Generator_ColumnVarNameInTable="columnPARTDEF_VAT_CODE" msprop:Generator_ColumnPropNameInRow="PARTDEF_VAT_CODE" msprop:Generator_ColumnPropNameInTable="PARTDEF_VAT_CODEColumn" msprop:Generator_UserColumnName="PARTDEF_VAT_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDEF_SUPPLIER" msprop:Generator_ColumnVarNameInTable="columnPARTDEF_SUPPLIER" msprop:Generator_ColumnPropNameInRow="PARTDEF_SUPPLIER" msprop:Generator_ColumnPropNameInTable="PARTDEF_SUPPLIERColumn" msprop:Generator_UserColumnName="PARTDEF_SUPPLIER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDEF_SUP_PART" msprop:Generator_ColumnVarNameInTable="columnPARTDEF_SUP_PART" msprop:Generator_ColumnPropNameInRow="PARTDEF_SUP_PART" msprop:Generator_ColumnPropNameInTable="PARTDEF_SUP_PARTColumn" msprop:Generator_UserColumnName="PARTDEF_SUP_PART" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTBASIC_UNIT" msprop:Generator_ColumnVarNameInTable="columnPARTBASIC_UNIT" msprop:Generator_ColumnPropNameInRow="PARTBASIC_UNIT" msprop:Generator_ColumnPropNameInTable="PARTBASIC_UNITColumn" msprop:Generator_UserColumnName="PARTBASIC_UNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTALT_UNIT" msprop:Generator_ColumnVarNameInTable="columnPARTALT_UNIT" msprop:Generator_ColumnPropNameInRow="PARTALT_UNIT" msprop:Generator_ColumnPropNameInTable="PARTALT_UNITColumn" msprop:Generator_UserColumnName="PARTALT_UNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTALT_CON_FACT" msprop:Generator_ColumnVarNameInTable="columnPARTALT_CON_FACT" msprop:Generator_ColumnPropNameInRow="PARTALT_CON_FACT" msprop:Generator_ColumnPropNameInTable="PARTALT_CON_FACTColumn" msprop:Generator_UserColumnName="PARTALT_CON_FACT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTALT_UNIT_2" msprop:Generator_ColumnVarNameInTable="columnPARTALT_UNIT_2" msprop:Generator_ColumnPropNameInRow="PARTALT_UNIT_2" msprop:Generator_ColumnPropNameInTable="PARTALT_UNIT_2Column" msprop:Generator_UserColumnName="PARTALT_UNIT_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTALT_CONV_2" msprop:Generator_ColumnVarNameInTable="columnPARTALT_CONV_2" msprop:Generator_ColumnPropNameInRow="PARTALT_CONV_2" msprop:Generator_ColumnPropNameInTable="PARTALT_CONV_2Column" msprop:Generator_UserColumnName="PARTALT_CONV_2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTUNIT_COST" msprop:Generator_ColumnVarNameInTable="columnPARTUNIT_COST" msprop:Generator_ColumnPropNameInRow="PARTUNIT_COST" msprop:Generator_ColumnPropNameInTable="PARTUNIT_COSTColumn" msprop:Generator_UserColumnName="PARTUNIT_COST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTCOST_DATE" msprop:Generator_ColumnVarNameInTable="columnPARTCOST_DATE" msprop:Generator_ColumnPropNameInRow="PARTCOST_DATE" msprop:Generator_ColumnPropNameInTable="PARTCOST_DATEColumn" msprop:Generator_UserColumnName="PARTCOST_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PARTBOM_BATCH" msprop:Generator_ColumnVarNameInTable="columnPARTBOM_BATCH" msprop:Generator_ColumnPropNameInRow="PARTBOM_BATCH" msprop:Generator_ColumnPropNameInTable="PARTBOM_BATCHColumn" msprop:Generator_UserColumnName="PARTBOM_BATCH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTWEIGHT_UNIT" msprop:Generator_ColumnVarNameInTable="columnPARTWEIGHT_UNIT" msprop:Generator_ColumnPropNameInRow="PARTWEIGHT_UNIT" msprop:Generator_ColumnPropNameInTable="PARTWEIGHT_UNITColumn" msprop:Generator_UserColumnName="PARTWEIGHT_UNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTBASIC_WEIGHT" msprop:Generator_ColumnVarNameInTable="columnPARTBASIC_WEIGHT" msprop:Generator_ColumnPropNameInRow="PARTBASIC_WEIGHT" msprop:Generator_ColumnPropNameInTable="PARTBASIC_WEIGHTColumn" msprop:Generator_UserColumnName="PARTBASIC_WEIGHT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTDIM_UNIT1" msprop:Generator_ColumnVarNameInTable="columnPARTDIM_UNIT1" msprop:Generator_ColumnPropNameInRow="PARTDIM_UNIT1" msprop:Generator_ColumnPropNameInTable="PARTDIM_UNIT1Column" msprop:Generator_UserColumnName="PARTDIM_UNIT1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDIM_UNIT2" msprop:Generator_ColumnVarNameInTable="columnPARTDIM_UNIT2" msprop:Generator_ColumnPropNameInRow="PARTDIM_UNIT2" msprop:Generator_ColumnPropNameInTable="PARTDIM_UNIT2Column" msprop:Generator_UserColumnName="PARTDIM_UNIT2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDIM_UNIT3" msprop:Generator_ColumnVarNameInTable="columnPARTDIM_UNIT3" msprop:Generator_ColumnPropNameInRow="PARTDIM_UNIT3" msprop:Generator_ColumnPropNameInTable="PARTDIM_UNIT3Column" msprop:Generator_UserColumnName="PARTDIM_UNIT3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTDIM1" msprop:Generator_ColumnVarNameInTable="columnPARTDIM1" msprop:Generator_ColumnPropNameInRow="PARTDIM1" msprop:Generator_ColumnPropNameInTable="PARTDIM1Column" msprop:Generator_UserColumnName="PARTDIM1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTDIM2" msprop:Generator_ColumnVarNameInTable="columnPARTDIM2" msprop:Generator_ColumnPropNameInRow="PARTDIM2" msprop:Generator_ColumnPropNameInTable="PARTDIM2Column" msprop:Generator_UserColumnName="PARTDIM2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTDIM3" msprop:Generator_ColumnVarNameInTable="columnPARTDIM3" msprop:Generator_ColumnPropNameInRow="PARTDIM3" msprop:Generator_ColumnPropNameInTable="PARTDIM3Column" msprop:Generator_UserColumnName="PARTDIM3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTVOL_UNIT" msprop:Generator_ColumnVarNameInTable="columnPARTVOL_UNIT" msprop:Generator_ColumnPropNameInRow="PARTVOL_UNIT" msprop:Generator_ColumnPropNameInTable="PARTVOL_UNITColumn" msprop:Generator_UserColumnName="PARTVOL_UNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTVOL" msprop:Generator_ColumnVarNameInTable="columnPARTVOL" msprop:Generator_ColumnPropNameInRow="PARTVOL" msprop:Generator_ColumnPropNameInTable="PARTVOLColumn" msprop:Generator_UserColumnName="PARTVOL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTSIZE_CAT" msprop:Generator_ColumnVarNameInTable="columnPARTSIZE_CAT" msprop:Generator_ColumnPropNameInRow="PARTSIZE_CAT" msprop:Generator_ColumnPropNameInTable="PARTSIZE_CATColumn" msprop:Generator_UserColumnName="PARTSIZE_CAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTISS_UNIT" msprop:Generator_ColumnVarNameInTable="columnPARTISS_UNIT" msprop:Generator_ColumnPropNameInRow="PARTISS_UNIT" msprop:Generator_ColumnPropNameInTable="PARTISS_UNITColumn" msprop:Generator_UserColumnName="PARTISS_UNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTREC_UNIT" msprop:Generator_ColumnVarNameInTable="columnPARTREC_UNIT" msprop:Generator_ColumnPropNameInRow="PARTREC_UNIT" msprop:Generator_ColumnPropNameInTable="PARTREC_UNITColumn" msprop:Generator_UserColumnName="PARTREC_UNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARTMATL_PRICE" msprop:Generator_ColumnVarNameInTable="columnPARTMATL_PRICE" msprop:Generator_ColumnPropNameInRow="PARTMATL_PRICE" msprop:Generator_ColumnPropNameInTable="PARTMATL_PRICEColumn" msprop:Generator_UserColumnName="PARTMATL_PRICE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTTOT_KIT" msprop:Generator_ColumnVarNameInTable="columnPARTTOT_KIT" msprop:Generator_ColumnPropNameInRow="PARTTOT_KIT" msprop:Generator_ColumnPropNameInTable="PARTTOT_KITColumn" msprop:Generator_UserColumnName="PARTTOT_KIT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_STOCK" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_STOCK" msprop:Generator_ColumnPropNameInRow="PARTQTY_STOCK" msprop:Generator_ColumnPropNameInTable="PARTQTY_STOCKColumn" msprop:Generator_UserColumnName="PARTQTY_STOCK" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTMRP_STOCK" msprop:Generator_ColumnVarNameInTable="columnPARTMRP_STOCK" msprop:Generator_ColumnPropNameInRow="PARTMRP_STOCK" msprop:Generator_ColumnPropNameInTable="PARTMRP_STOCKColumn" msprop:Generator_UserColumnName="PARTMRP_STOCK" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_THWIP" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_THWIP" msprop:Generator_ColumnPropNameInRow="PARTQTY_THWIP" msprop:Generator_ColumnPropNameInTable="PARTQTY_THWIPColumn" msprop:Generator_UserColumnName="PARTQTY_THWIP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_TRANS" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_TRANS" msprop:Generator_ColumnPropNameInRow="PARTQTY_TRANS" msprop:Generator_ColumnPropNameInTable="PARTQTY_TRANSColumn" msprop:Generator_UserColumnName="PARTQTY_TRANS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_DESP" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_DESP" msprop:Generator_ColumnPropNameInRow="PARTQTY_DESP" msprop:Generator_ColumnPropNameInTable="PARTQTY_DESPColumn" msprop:Generator_UserColumnName="PARTQTY_DESP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_GI" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_GI" msprop:Generator_ColumnPropNameInRow="PARTQTY_GI" msprop:Generator_ColumnPropNameInTable="PARTQTY_GIColumn" msprop:Generator_UserColumnName="PARTQTY_GI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_QUAR" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_QUAR" msprop:Generator_ColumnPropNameInRow="PARTQTY_QUAR" msprop:Generator_ColumnPropNameInTable="PARTQTY_QUARColumn" msprop:Generator_UserColumnName="PARTQTY_QUAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_1" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_1" msprop:Generator_ColumnPropNameInRow="PARTQTY_1" msprop:Generator_ColumnPropNameInTable="PARTQTY_1Column" msprop:Generator_UserColumnName="PARTQTY_1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_2" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_2" msprop:Generator_ColumnPropNameInRow="PARTQTY_2" msprop:Generator_ColumnPropNameInTable="PARTQTY_2Column" msprop:Generator_UserColumnName="PARTQTY_2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_3" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_3" msprop:Generator_ColumnPropNameInRow="PARTQTY_3" msprop:Generator_ColumnPropNameInTable="PARTQTY_3Column" msprop:Generator_UserColumnName="PARTQTY_3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_4" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_4" msprop:Generator_ColumnPropNameInRow="PARTQTY_4" msprop:Generator_ColumnPropNameInTable="PARTQTY_4Column" msprop:Generator_UserColumnName="PARTQTY_4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_5" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_5" msprop:Generator_ColumnPropNameInRow="PARTQTY_5" msprop:Generator_ColumnPropNameInTable="PARTQTY_5Column" msprop:Generator_UserColumnName="PARTQTY_5" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_6" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_6" msprop:Generator_ColumnPropNameInRow="PARTQTY_6" msprop:Generator_ColumnPropNameInTable="PARTQTY_6Column" msprop:Generator_UserColumnName="PARTQTY_6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_UNREVIEW" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_UNREVIEW" msprop:Generator_ColumnPropNameInRow="PARTQTY_UNREVIEW" msprop:Generator_ColumnPropNameInTable="PARTQTY_UNREVIEWColumn" msprop:Generator_UserColumnName="PARTQTY_UNREVIEW" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTALLOC_SUG" msprop:Generator_ColumnVarNameInTable="columnPARTALLOC_SUG" msprop:Generator_ColumnPropNameInRow="PARTALLOC_SUG" msprop:Generator_ColumnPropNameInTable="PARTALLOC_SUGColumn" msprop:Generator_UserColumnName="PARTALLOC_SUG" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTALLOC_UNCOM" msprop:Generator_ColumnVarNameInTable="columnPARTALLOC_UNCOM" msprop:Generator_ColumnPropNameInRow="PARTALLOC_UNCOM" msprop:Generator_ColumnPropNameInTable="PARTALLOC_UNCOMColumn" msprop:Generator_UserColumnName="PARTALLOC_UNCOM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTALLOC_FIRM" msprop:Generator_ColumnVarNameInTable="columnPARTALLOC_FIRM" msprop:Generator_ColumnPropNameInRow="PARTALLOC_FIRM" msprop:Generator_ColumnPropNameInTable="PARTALLOC_FIRMColumn" msprop:Generator_UserColumnName="PARTALLOC_FIRM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTALLOC_COM" msprop:Generator_ColumnVarNameInTable="columnPARTALLOC_COM" msprop:Generator_ColumnPropNameInRow="PARTALLOC_COM" msprop:Generator_ColumnPropNameInTable="PARTALLOC_COMColumn" msprop:Generator_UserColumnName="PARTALLOC_COM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTALLOC_SAL" msprop:Generator_ColumnVarNameInTable="columnPARTALLOC_SAL" msprop:Generator_ColumnPropNameInRow="PARTALLOC_SAL" msprop:Generator_ColumnPropNameInTable="PARTALLOC_SALColumn" msprop:Generator_UserColumnName="PARTALLOC_SAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTQTY_REQN" msprop:Generator_ColumnVarNameInTable="columnPARTQTY_REQN" msprop:Generator_ColumnPropNameInRow="PARTQTY_REQN" msprop:Generator_ColumnPropNameInTable="PARTQTY_REQNColumn" msprop:Generator_UserColumnName="PARTQTY_REQN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORD_UNREL" msprop:Generator_ColumnVarNameInTable="columnPARTORD_UNREL" msprop:Generator_ColumnPropNameInRow="PARTORD_UNREL" msprop:Generator_ColumnPropNameInTable="PARTORD_UNRELColumn" msprop:Generator_UserColumnName="PARTORD_UNREL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORD_SUG" msprop:Generator_ColumnVarNameInTable="columnPARTORD_SUG" msprop:Generator_ColumnPropNameInRow="PARTORD_SUG" msprop:Generator_ColumnPropNameInTable="PARTORD_SUGColumn" msprop:Generator_UserColumnName="PARTORD_SUG" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORD_UNCOM" msprop:Generator_ColumnVarNameInTable="columnPARTORD_UNCOM" msprop:Generator_ColumnPropNameInRow="PARTORD_UNCOM" msprop:Generator_ColumnPropNameInTable="PARTORD_UNCOMColumn" msprop:Generator_UserColumnName="PARTORD_UNCOM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORD_FIRM" msprop:Generator_ColumnVarNameInTable="columnPARTORD_FIRM" msprop:Generator_ColumnPropNameInRow="PARTORD_FIRM" msprop:Generator_ColumnPropNameInTable="PARTORD_FIRMColumn" msprop:Generator_UserColumnName="PARTORD_FIRM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORD_COM" msprop:Generator_ColumnVarNameInTable="columnPARTORD_COM" msprop:Generator_ColumnPropNameInRow="PARTORD_COM" msprop:Generator_ColumnPropNameInTable="PARTORD_COMColumn" msprop:Generator_UserColumnName="PARTORD_COM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTORD_PUR" msprop:Generator_ColumnVarNameInTable="columnPARTORD_PUR" msprop:Generator_ColumnPropNameInRow="PARTORD_PUR" msprop:Generator_ColumnPropNameInTable="PARTORD_PURColumn" msprop:Generator_UserColumnName="PARTORD_PUR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PARTUPDATE_COUNT" msprop:Generator_ColumnVarNameInTable="columnPARTUPDATE_COUNT" msprop:Generator_ColumnPropNameInRow="PARTUPDATE_COUNT" msprop:Generator_ColumnPropNameInTable="PARTUPDATE_COUNTColumn" msprop:Generator_UserColumnName="PARTUPDATE_COUNT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MODX_DATA" msprop:Generator_TableClassName="MODX_DATADataTable" msprop:Generator_TableVarName="tableMODX_DATA" msprop:Generator_TablePropName="MODX_DATA" msprop:Generator_RowDeletingName="MODX_DATARowDeleting" msprop:Generator_RowChangingName="MODX_DATARowChanging" msprop:Generator_RowEvHandlerName="MODX_DATARowChangeEventHandler" msprop:Generator_RowDeletedName="MODX_DATARowDeleted" msprop:Generator_UserTableName="MODX_DATA" msprop:Generator_RowChangedName="MODX_DATARowChanged" msprop:Generator_RowEvArgName="MODX_DATARowChangeEvent" msprop:Generator_RowClassName="MODX_DATARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MODX1_CO_SITE" msprop:Generator_ColumnVarNameInTable="columnMODX1_CO_SITE" msprop:Generator_ColumnPropNameInRow="MODX1_CO_SITE" msprop:Generator_ColumnPropNameInTable="MODX1_CO_SITEColumn" msprop:Generator_UserColumnName="MODX1_CO_SITE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX1_REC_TYPE" msprop:Generator_ColumnVarNameInTable="columnMODX1_REC_TYPE" msprop:Generator_ColumnPropNameInRow="MODX1_REC_TYPE" msprop:Generator_ColumnPropNameInTable="MODX1_REC_TYPEColumn" msprop:Generator_UserColumnName="MODX1_REC_TYPE" type="xs:double" />
+              <xs:element name="MODX1_MAST_REF" msprop:Generator_ColumnVarNameInTable="columnMODX1_MAST_REF" msprop:Generator_ColumnPropNameInRow="MODX1_MAST_REF" msprop:Generator_ColumnPropNameInTable="MODX1_MAST_REFColumn" msprop:Generator_UserColumnName="MODX1_MAST_REF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX1_COMP_GROUP" msprop:Generator_ColumnVarNameInTable="columnMODX1_COMP_GROUP" msprop:Generator_ColumnPropNameInRow="MODX1_COMP_GROUP" msprop:Generator_ColumnPropNameInTable="MODX1_COMP_GROUPColumn" msprop:Generator_UserColumnName="MODX1_COMP_GROUP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX1_COMP_REF" msprop:Generator_ColumnVarNameInTable="columnMODX1_COMP_REF" msprop:Generator_ColumnPropNameInRow="MODX1_COMP_REF" msprop:Generator_ColumnPropNameInTable="MODX1_COMP_REFColumn" msprop:Generator_UserColumnName="MODX1_COMP_REF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX1_STAGE" msprop:Generator_ColumnVarNameInTable="columnMODX1_STAGE" msprop:Generator_ColumnPropNameInRow="MODX1_STAGE" msprop:Generator_ColumnPropNameInTable="MODX1_STAGEColumn" msprop:Generator_UserColumnName="MODX1_STAGE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX1_DATE_IN" msprop:Generator_ColumnVarNameInTable="columnMODX1_DATE_IN" msprop:Generator_ColumnPropNameInRow="MODX1_DATE_IN" msprop:Generator_ColumnPropNameInTable="MODX1_DATE_INColumn" msprop:Generator_UserColumnName="MODX1_DATE_IN" type="xs:dateTime" />
+              <xs:element name="MODX1_ITEM" msprop:Generator_ColumnVarNameInTable="columnMODX1_ITEM" msprop:Generator_ColumnPropNameInRow="MODX1_ITEM" msprop:Generator_ColumnPropNameInTable="MODX1_ITEMColumn" msprop:Generator_UserColumnName="MODX1_ITEM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX2_CO_SITE" msprop:Generator_ColumnVarNameInTable="columnMODX2_CO_SITE" msprop:Generator_ColumnPropNameInRow="MODX2_CO_SITE" msprop:Generator_ColumnPropNameInTable="MODX2_CO_SITEColumn" msprop:Generator_UserColumnName="MODX2_CO_SITE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX2_REC_TYPE" msprop:Generator_ColumnVarNameInTable="columnMODX2_REC_TYPE" msprop:Generator_ColumnPropNameInRow="MODX2_REC_TYPE" msprop:Generator_ColumnPropNameInTable="MODX2_REC_TYPEColumn" msprop:Generator_UserColumnName="MODX2_REC_TYPE" type="xs:double" minOccurs="0" />
+              <xs:element name="MODX2_COMP_REF" msprop:Generator_ColumnVarNameInTable="columnMODX2_COMP_REF" msprop:Generator_ColumnPropNameInRow="MODX2_COMP_REF" msprop:Generator_ColumnPropNameInTable="MODX2_COMP_REFColumn" msprop:Generator_UserColumnName="MODX2_COMP_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX2_STAGE" msprop:Generator_ColumnVarNameInTable="columnMODX2_STAGE" msprop:Generator_ColumnPropNameInRow="MODX2_STAGE" msprop:Generator_ColumnPropNameInTable="MODX2_STAGEColumn" msprop:Generator_UserColumnName="MODX2_STAGE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX2_DATE_IN" msprop:Generator_ColumnVarNameInTable="columnMODX2_DATE_IN" msprop:Generator_ColumnPropNameInRow="MODX2_DATE_IN" msprop:Generator_ColumnPropNameInTable="MODX2_DATE_INColumn" msprop:Generator_UserColumnName="MODX2_DATE_IN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MODX2_ITEM" msprop:Generator_ColumnVarNameInTable="columnMODX2_ITEM" msprop:Generator_ColumnPropNameInRow="MODX2_ITEM" msprop:Generator_ColumnPropNameInTable="MODX2_ITEMColumn" msprop:Generator_UserColumnName="MODX2_ITEM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX2_COMP_GROUP" msprop:Generator_ColumnVarNameInTable="columnMODX2_COMP_GROUP" msprop:Generator_ColumnPropNameInRow="MODX2_COMP_GROUP" msprop:Generator_ColumnPropNameInTable="MODX2_COMP_GROUPColumn" msprop:Generator_UserColumnName="MODX2_COMP_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX2_MAST_REF" msprop:Generator_ColumnVarNameInTable="columnMODX2_MAST_REF" msprop:Generator_ColumnPropNameInRow="MODX2_MAST_REF" msprop:Generator_ColumnPropNameInTable="MODX2_MAST_REFColumn" msprop:Generator_UserColumnName="MODX2_MAST_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX3_CO_SITE" msprop:Generator_ColumnVarNameInTable="columnMODX3_CO_SITE" msprop:Generator_ColumnPropNameInRow="MODX3_CO_SITE" msprop:Generator_ColumnPropNameInTable="MODX3_CO_SITEColumn" msprop:Generator_UserColumnName="MODX3_CO_SITE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX3_REC_TYPE" msprop:Generator_ColumnVarNameInTable="columnMODX3_REC_TYPE" msprop:Generator_ColumnPropNameInRow="MODX3_REC_TYPE" msprop:Generator_ColumnPropNameInTable="MODX3_REC_TYPEColumn" msprop:Generator_UserColumnName="MODX3_REC_TYPE" type="xs:double" minOccurs="0" />
+              <xs:element name="MODX3_COMP_GROUP" msprop:Generator_ColumnVarNameInTable="columnMODX3_COMP_GROUP" msprop:Generator_ColumnPropNameInRow="MODX3_COMP_GROUP" msprop:Generator_ColumnPropNameInTable="MODX3_COMP_GROUPColumn" msprop:Generator_UserColumnName="MODX3_COMP_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX3_COMP_REF" msprop:Generator_ColumnVarNameInTable="columnMODX3_COMP_REF" msprop:Generator_ColumnPropNameInRow="MODX3_COMP_REF" msprop:Generator_ColumnPropNameInTable="MODX3_COMP_REFColumn" msprop:Generator_UserColumnName="MODX3_COMP_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX3_STAGE" msprop:Generator_ColumnVarNameInTable="columnMODX3_STAGE" msprop:Generator_ColumnPropNameInRow="MODX3_STAGE" msprop:Generator_ColumnPropNameInTable="MODX3_STAGEColumn" msprop:Generator_UserColumnName="MODX3_STAGE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX3_DATE_IN" msprop:Generator_ColumnVarNameInTable="columnMODX3_DATE_IN" msprop:Generator_ColumnPropNameInRow="MODX3_DATE_IN" msprop:Generator_ColumnPropNameInTable="MODX3_DATE_INColumn" msprop:Generator_UserColumnName="MODX3_DATE_IN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MODX3_ITEM" msprop:Generator_ColumnVarNameInTable="columnMODX3_ITEM" msprop:Generator_ColumnPropNameInRow="MODX3_ITEM" msprop:Generator_ColumnPropNameInTable="MODX3_ITEMColumn" msprop:Generator_UserColumnName="MODX3_ITEM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX3_MAST_REF" msprop:Generator_ColumnVarNameInTable="columnMODX3_MAST_REF" msprop:Generator_ColumnPropNameInRow="MODX3_MAST_REF" msprop:Generator_ColumnPropNameInTable="MODX3_MAST_REFColumn" msprop:Generator_UserColumnName="MODX3_MAST_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX4_CO_SITE" msprop:Generator_ColumnVarNameInTable="columnMODX4_CO_SITE" msprop:Generator_ColumnPropNameInRow="MODX4_CO_SITE" msprop:Generator_ColumnPropNameInTable="MODX4_CO_SITEColumn" msprop:Generator_UserColumnName="MODX4_CO_SITE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX4_REC_TYPE" msprop:Generator_ColumnVarNameInTable="columnMODX4_REC_TYPE" msprop:Generator_ColumnPropNameInRow="MODX4_REC_TYPE" msprop:Generator_ColumnPropNameInTable="MODX4_REC_TYPEColumn" msprop:Generator_UserColumnName="MODX4_REC_TYPE" type="xs:double" minOccurs="0" />
+              <xs:element name="MODX4_MAST_REF" msprop:Generator_ColumnVarNameInTable="columnMODX4_MAST_REF" msprop:Generator_ColumnPropNameInRow="MODX4_MAST_REF" msprop:Generator_ColumnPropNameInTable="MODX4_MAST_REFColumn" msprop:Generator_UserColumnName="MODX4_MAST_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX4_COMP_GROUP" msprop:Generator_ColumnVarNameInTable="columnMODX4_COMP_GROUP" msprop:Generator_ColumnPropNameInRow="MODX4_COMP_GROUP" msprop:Generator_ColumnPropNameInTable="MODX4_COMP_GROUPColumn" msprop:Generator_UserColumnName="MODX4_COMP_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX4_STAGE" msprop:Generator_ColumnVarNameInTable="columnMODX4_STAGE" msprop:Generator_ColumnPropNameInRow="MODX4_STAGE" msprop:Generator_ColumnPropNameInTable="MODX4_STAGEColumn" msprop:Generator_UserColumnName="MODX4_STAGE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX4_DATE_IN" msprop:Generator_ColumnVarNameInTable="columnMODX4_DATE_IN" msprop:Generator_ColumnPropNameInRow="MODX4_DATE_IN" msprop:Generator_ColumnPropNameInTable="MODX4_DATE_INColumn" msprop:Generator_UserColumnName="MODX4_DATE_IN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MODX4_ITEM" msprop:Generator_ColumnVarNameInTable="columnMODX4_ITEM" msprop:Generator_ColumnPropNameInRow="MODX4_ITEM" msprop:Generator_ColumnPropNameInTable="MODX4_ITEMColumn" msprop:Generator_UserColumnName="MODX4_ITEM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODX4_COMP_REF" msprop:Generator_ColumnVarNameInTable="columnMODX4_COMP_REF" msprop:Generator_ColumnPropNameInRow="MODX4_COMP_REF" msprop:Generator_ColumnPropNameInTable="MODX4_COMP_REFColumn" msprop:Generator_UserColumnName="MODX4_COMP_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODXUSAGE" msprop:Generator_ColumnVarNameInTable="columnMODXUSAGE" msprop:Generator_ColumnPropNameInRow="MODXUSAGE" msprop:Generator_ColumnPropNameInTable="MODXUSAGEColumn" msprop:Generator_UserColumnName="MODXUSAGE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MODXUSAGE_ATTR" msprop:Generator_ColumnVarNameInTable="columnMODXUSAGE_ATTR" msprop:Generator_ColumnPropNameInRow="MODXUSAGE_ATTR" msprop:Generator_ColumnPropNameInTable="MODXUSAGE_ATTRColumn" msprop:Generator_UserColumnName="MODXUSAGE_ATTR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODXUNIT" msprop:Generator_ColumnVarNameInTable="columnMODXUNIT" msprop:Generator_ColumnPropNameInRow="MODXUNIT" msprop:Generator_ColumnPropNameInTable="MODXUNITColumn" msprop:Generator_UserColumnName="MODXUNIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODXMAST_TYPE" msprop:Generator_ColumnVarNameInTable="columnMODXMAST_TYPE" msprop:Generator_ColumnPropNameInRow="MODXMAST_TYPE" msprop:Generator_ColumnPropNameInTable="MODXMAST_TYPEColumn" msprop:Generator_UserColumnName="MODXMAST_TYPE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MODXCOMP_TYPE" msprop:Generator_ColumnVarNameInTable="columnMODXCOMP_TYPE" msprop:Generator_ColumnPropNameInRow="MODXCOMP_TYPE" msprop:Generator_ColumnPropNameInTable="MODXCOMP_TYPEColumn" msprop:Generator_UserColumnName="MODXCOMP_TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODXCOMP_FLAG" msprop:Generator_ColumnVarNameInTable="columnMODXCOMP_FLAG" msprop:Generator_ColumnPropNameInRow="MODXCOMP_FLAG" msprop:Generator_ColumnPropNameInTable="MODXCOMP_FLAGColumn" msprop:Generator_UserColumnName="MODXCOMP_FLAG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODXDATE_OUT" msprop:Generator_ColumnVarNameInTable="columnMODXDATE_OUT" msprop:Generator_ColumnPropNameInRow="MODXDATE_OUT" msprop:Generator_ColumnPropNameInTable="MODXDATE_OUTColumn" msprop:Generator_UserColumnName="MODXDATE_OUT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MODXLINE_NO" msprop:Generator_ColumnVarNameInTable="columnMODXLINE_NO" msprop:Generator_ColumnPropNameInRow="MODXLINE_NO" msprop:Generator_ColumnPropNameInTable="MODXLINE_NOColumn" msprop:Generator_UserColumnName="MODXLINE_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MODXLEAD_TIME" msprop:Generator_ColumnVarNameInTable="columnMODXLEAD_TIME" msprop:Generator_ColumnPropNameInRow="MODXLEAD_TIME" msprop:Generator_ColumnPropNameInTable="MODXLEAD_TIMEColumn" msprop:Generator_UserColumnName="MODXLEAD_TIME" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MODXSPARE" msprop:Generator_ColumnVarNameInTable="columnMODXSPARE" msprop:Generator_ColumnPropNameInRow="MODXSPARE" msprop:Generator_ColumnPropNameInTable="MODXSPAREColumn" msprop:Generator_UserColumnName="MODXSPARE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODXUPDATE_COUNT" msprop:Generator_ColumnVarNameInTable="columnMODXUPDATE_COUNT" msprop:Generator_ColumnPropNameInRow="MODXUPDATE_COUNT" msprop:Generator_ColumnPropNameInTable="MODXUPDATE_COUNTColumn" msprop:Generator_UserColumnName="MODXUPDATE_COUNT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PART_DATA" />
+      <xs:field xpath="mstns:PART1_CO_SITE" />
+      <xs:field xpath="mstns:PART1_REC_TYPE" />
+      <xs:field xpath="mstns:PART1_PART" />
+    </xs:unique>
+    <xs:unique name="MODX_DATA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MODX_DATA" />
+      <xs:field xpath="mstns:MODX1_CO_SITE" />
+      <xs:field xpath="mstns:MODX1_REC_TYPE" />
+      <xs:field xpath="mstns:MODX1_MAST_REF" />
+      <xs:field xpath="mstns:MODX1_COMP_GROUP" />
+      <xs:field xpath="mstns:MODX1_COMP_REF" />
+      <xs:field xpath="mstns:MODX1_STAGE" />
+      <xs:field xpath="mstns:MODX1_DATE_IN" />
+      <xs:field xpath="mstns:MODX1_ITEM" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

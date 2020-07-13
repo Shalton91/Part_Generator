@@ -62,7 +62,6 @@ namespace Part_Generator
                         options.Add(t.Size);
                     }
                 }
-
             }
             //options.Sort();
 
@@ -170,8 +169,7 @@ namespace Part_Generator
             da.Default_Value = tb.Text;
         }
         private IOFileInterface LogFile()
-        {
-            
+        {           
             string FilePath = @"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\LogFiles\" +
                System.Environment.UserName.ToUpper() +
                Machining.RandString() + ".log";
@@ -190,52 +188,7 @@ namespace Part_Generator
             return output;
 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            string hold = "";
-            var writing = LogFile();
-            TItem TagItem = ((TItem)cbGroup.SelectedItem);
-            List<string> Co = new List<string>();
-            //TODO: add user choice to company selection
-            hold = "Companies selected: ";
-            if ((bool)ChBCo72.IsChecked)
-            {
-                hold += "Co72;";
-                Co.Add("72");
-            }
-            if ((bool)ChBCo13.IsChecked)
-            {
-                hold += "Co13;";
-                Co.Add("13");
-            }
-            if ((bool)ChBCo81.IsChecked)
-            {
-                hold += "Co81;";
-                Co.Add("81");
-            }
-            writing.sw.WriteLine(hold);
-            writing.sw.WriteLine("*".PadRight(30, '*'));
-            foreach ( string s in Co)
-            {
-                mTMSLibrary.Screens m = new mTMSLibrary.Screens(s);
-                writing.sw.WriteLine("Co" + s + " results:");
-                writing.sw.WriteLine("*".PadRight(30, '*'));
-                hold = TagItem.AddToMTMS(m, tbPartNumber.Text);
-                writing.sw.WriteLine(hold);
-                tbResults.Text += hold + "\n";
-                hold = TagItem.AddToConfigurator(m, tbPartNumber.Text);
-                writing.sw.WriteLine(hold);
-                tbResults.Text += hold + "\n";
-                foreach (defualtAtts da in TagItem.Default_attributes)
-                {
-                    hold = "attribute: " + da.Att_Name + "; Value: " + da.Default_Value + "; Result: " + da.MCO61(m, TagItem, tbPartNumber.Text);
-                    writing.sw.WriteLine(hold);
-                    tbResults.Text += hold + "\n";
-                }
-                m.Close();
-            }
-            writing.Close();
-        }        
+  
 
         private void cbGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -264,10 +217,70 @@ namespace Part_Generator
             {
 
             }
-        }      
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Wait;
+            string hold = "";
+            var writing = LogFile();
+            TItem TagItem = ((TItem)cbGroup.SelectedItem);
+            List<string> Co = new List<string>();
+            hold = "Companies selected: ";
+            if ((bool)ChBCo72.IsChecked)
+            {
+                hold += "Co72;";
+                Co.Add("72");
+            }
+            if ((bool)ChBCo13.IsChecked)
+            {
+                hold += "Co13;";
+                Co.Add("13");
+            }
+            if ((bool)ChBCo81.IsChecked)
+            {
+                hold += "Co81;";
+                Co.Add("81");
+            }
+            writing.sw.WriteLine(hold);
+            writing.sw.WriteLine("*".PadRight(30, '*'));
+            foreach (string s in Co)
+            {
+                mTMSLibrary.Screens m = new mTMSLibrary.Screens(s);
+                writing.sw.WriteLine("Co" + s + " results:");
+                writing.sw.WriteLine("*".PadRight(30, '*'));
+                hold = TagItem.AddToMTMS(m, tbPartNumber.Text, s);
+                writing.sw.WriteLine(hold);
+                tbResults.Text += hold + "\n";
+                hold = TagItem.AddToConfigurator(m, tbPartNumber.Text);
+                writing.sw.WriteLine(hold);
+                tbResults.Text += hold + "\n";
+
+                if (TagItem.PartInConfig(tbPartNumber.Text, s))
+                {
+
+                    MessageBoxResult h = MessageBox.Show(tbPartNumber.Text + " exists in " + TagItem.GroupName + " on Co " + s + "\nContinue?", "", MessageBoxButton.YesNo);
+                    if (h == MessageBoxResult.No)
+                    {
+                        Mouse.OverrideCursor = null;
+                        return;
+                    }
+                } 
+
+                foreach (defualtAtts da in TagItem.Default_attributes)
+                {
+                    hold = "attribute: " + da.Att_Name + "; Value: " + da.Default_Value + "; Result: " + da.MCO61(m, TagItem, tbPartNumber.Text);
+                    writing.sw.WriteLine(hold);
+                    tbResults.Text += hold + "\n";
+                }
+                m.Close();
+            }
+            writing.Close();
+            Mouse.OverrideCursor = null;
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            Mouse.OverrideCursor = Cursors.Wait;
             TItem TagItem = ((TItem)cbGroup.SelectedItem);
             Console.WriteLine(TagItem.SolidEdgePart.FilePath);
             if (!string.IsNullOrEmpty(TagItem.SolidEdgePart.FilePath))
@@ -283,11 +296,18 @@ namespace Part_Generator
                         break;
                 }
             }
+            Mouse.OverrideCursor = null;
         }
 
         private void tbPartNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
             btnmTMS.IsEnabled = !string.IsNullOrEmpty(tbPartNumber.Text);
+        }
+
+        private void btnISOTOL_Click(object sender, RoutedEventArgs e)
+        {
+            ISOTolerator iso = new ISOTolerator();
+            iso.Show();
         }
     }
 
@@ -311,23 +331,54 @@ namespace Part_Generator
             return (string)m.MCO52(Part_Number,Model,GroupName,1,MTMS_Stage,MTMS_Item);
 
         }
-        public string AddToMTMS(mTMSLibrary.Screens m, string Part_Number)
+        
+        public bool PartExist(string PartNumber, string Co)
+        {
+            mTMS.PART_DATADataTable PART = new mTMS.PART_DATADataTable();
+            mTMSTableAdapters.PART_DATATableAdapter dtaPART = new mTMSTableAdapters.PART_DATATableAdapter();
+            dtaPART.Fill(PART, Co, PartNumber.PadRight(20));
+            //MessageBox.Show(Co + "\n" + PartNumber.PadRight(20) + "*\n" + PART.Rows.Count); 
+            return PART.Rows.Count > 0;
+        }
+        public bool PartInConfig(string PartNumber, string Co)
+        {
+            mTMS.MODX_DATADataTable MODX = new mTMS.MODX_DATADataTable();
+            mTMSTableAdapters.MODX_DATATableAdapter dtaMODX = new mTMSTableAdapters.MODX_DATATableAdapter();
+            dtaMODX.Fill(MODX,Co,Model.PadRight(12),GroupName.PadRight(12), PartNumber.PadRight(20));
+            //MessageBox.Show( Co + "\n" + Model + "\n" +GroupName + "\n" + PartNumber + "\n" + MODX.Rows.Count.ToString());
+            return MODX.Rows.Count > 0;
+        }
+
+        public string AddToMTMS(mTMSLibrary.Screens m, string Part_Number , string site)
         {
             string desc = Type + ", " + Model + Size + " ";
+            
             switch (Mach_Type)
             {
                 case "DD":
                     desc += "DD " + GetAttByName("DDAFLATS").Default_Value + " X" + GetAttByName("DDROUND").Default_Value;
                     break;
                 case "BODY":
-//TODO add desc for bodies.
+                    desc +=  GetAttByName("BPPCD").Default_Value + " " + GetAttByName("BPNUMH").Default_Value + GetAttByName("BPHOLE").Default_Value + " " + GetAttByName("BPCENTRE").Default_Value;
                     break;
                 default:
                     break;
             }
-            return (string)m.MPD11(Part_Number,"A",desc,desc,"GB","150","","","M","","","","",Model,Size) + "/n" +
-                (string)m.MPD40(Part_Number, 1, SolidEdgePart.PartNumber,1,"","");
-
+            if (!PartExist(Part_Number, site))
+            {
+                switch (site)
+                {
+                    case "72":
+                        return (string)m.MPD11(Part_Number, "A", desc, desc, "GB", "150", "", "", "M", "", "", "", "", Model, Size, "Y") + "\n" +
+                            (string)m.MPD40(Part_Number, 1, SolidEdgePart.PartNumber, 1, "", "");
+                        break;
+                    default:
+                        return (string)m.MPD11(Part_Number, "A", desc, desc, "GB", "150", "", "", "M", "", "", "", "", Model, Size, "N") + "\n" +
+                            (string)m.MPD40(Part_Number, 1, SolidEdgePart.PartNumber, 1, "", "");
+                        break;
+                }
+            }
+            else { return "Part Already Exists"; }
         }
         public override string ToString()
         {
@@ -353,9 +404,16 @@ namespace Part_Generator
         public string Default_Value { get; set; }
 
         public string MCO61(mTMSLibrary.Screens m, TItem T, string Part_Number)
-        {
-            return (string)m.MCO61(Part_Number, T.Model, T.GroupName, T.MTMS_Stage, T.MTMS_Item, Att_Name, intType, Default_Value, Att_Type);
-             
+        {            
+            string output = "";
+            if (Default_Value.Contains('-') && Default_Value.Contains(',')){ output = Att_Name + ": Value not written; Range-Lists are not yet supported"; } //TODO: Add support for Range-List
+            else if (Default_Value.Contains('-')) { output = Att_Name + ": Value not written; Ranges are not yet supported"; } //TODO: Add support for Range 
+            else if (Default_Value.Contains(',')) { output = Att_Name + ": Value not written; Lists are not yet supported"; } //TODO: Add support for List
+            else
+            {
+                output = (string)m.MCO61(Part_Number, T.Model, T.GroupName, T.MTMS_Stage, T.MTMS_Item, Att_Name, intType, Default_Value, Att_Type);
+            }
+            return output;             
         }
     }
     public class SolidEdgeItem
