@@ -407,7 +407,10 @@ namespace Part_Generator
         {            
             string output = "";
             if (Default_Value.Contains('-') && Default_Value.Contains(',')){ output = Att_Name + ": Value not written; Range-Lists are not yet supported"; } //TODO: Add support for Range-List
-            else if (Default_Value.Contains('-')) { output = Att_Name + ": Value not written; Ranges are not yet supported"; } //TODO: Add support for Range 
+            else if (Default_Value.Contains('-'))
+            {
+                output = (string)m.MCO61Range(Part_Number, T.Model, T.GroupName, T.MTMS_Stage, T.MTMS_Item, Att_Name, intType, Default_Value.Split('-')[0], Default_Value.Split('-')[1], Att_Type);
+            } //TODO: Add support for Range 
             else if (Default_Value.Contains(',')) { output = Att_Name + ": Value not written; Lists are not yet supported"; } //TODO: Add support for List
             else
             {
