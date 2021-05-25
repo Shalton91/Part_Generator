@@ -64,10 +64,13 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <CheckBox x:Name="ChBCo13" IsChecked="True" Grid.Column="0" HorizontalAlignment="Center">Co13</CheckBox>
             <CheckBox x:Name="ChBCo72" IsChecked="True" Grid.Column="1" HorizontalAlignment="Center">Co72</CheckBox>
             <CheckBox x:Name="ChBCo81" IsChecked="False" Grid.Column="2" HorizontalAlignment="Center">Co81</CheckBox>
+            <CheckBox x:Name="ChBCo10" IsChecked="False" Grid.Column="3" HorizontalAlignment="Center">Co10</CheckBox>
+
         </Grid>
         <Button x:Name="btnSolidEdge" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Click="Button_Click_1" IsEnabled="False" >Generate Drawing</Button>
         <Button x:Name="btnmTMS" Grid.Row="7" Grid.ColumnSpan="2" Margin="5" Click="Button_Click" IsEnabled="False"> Run </Button>

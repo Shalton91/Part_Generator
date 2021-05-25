@@ -28,9 +28,13 @@ namespace Part_Generator
         public MainWindow()
         {
             InitializeComponent();
-            Master = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TItem>>(IO.File.ReadAllText(@"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\PartsConfigurator.json"));
+            string floc = @"\\rotork.co.uk\files\US-HOUSTON\ENGINEERING\Gears\Aplications\ABPartsGen\Parts Config";
+            foreach (string s in System.IO.Directory.GetFiles(floc))
+            {
+                Master.Add(Newtonsoft.Json.JsonConvert.DeserializeObject<TItem>(IO.File.ReadAllText(s)));
+            }
             GetCBTypes();
-            IO.File.WriteAllText(@"C:\Users\sean.halton\Desktop\New folder\hold.json", Newtonsoft.Json.JsonConvert.SerializeObject(Master));
+           // IO.File.WriteAllText(@"C:\Users\sean.halton\Desktop\New folder\hold.json", Newtonsoft.Json.JsonConvert.SerializeObject(Master));
         }
 
         public void GetCBTypes()
@@ -241,10 +245,24 @@ namespace Part_Generator
                 hold += "Co81;";
                 Co.Add("81");
             }
+            if ((bool)ChBCo10.IsChecked)
+            {
+                hold += "Co10;";
+                Co.Add("10");
+            }
             writing.sw.WriteLine(hold);
             writing.sw.WriteLine("*".PadRight(30, '*'));
             foreach (string s in Co)
             {
+                if (TagItem.PartInConfig(tbPartNumber.Text, s))
+                {
+                    MessageBoxResult h = MessageBox.Show(tbPartNumber.Text + " exists in " + TagItem.GroupName + " on Co " + s + "\nContinue?", "", MessageBoxButton.YesNo);
+                    if (h == MessageBoxResult.No)
+                    {
+                        Mouse.OverrideCursor = null;
+                        return;
+                    }
+                }
                 mTMSLibrary.Screens m = new mTMSLibrary.Screens(s);
                 writing.sw.WriteLine("Co" + s + " results:");
                 writing.sw.WriteLine("*".PadRight(30, '*'));
@@ -255,16 +273,7 @@ namespace Part_Generator
                 writing.sw.WriteLine(hold);
                 tbResults.Text += hold + "\n";
 
-                if (TagItem.PartInConfig(tbPartNumber.Text, s))
-                {
-
-                    MessageBoxResult h = MessageBox.Show(tbPartNumber.Text + " exists in " + TagItem.GroupName + " on Co " + s + "\nContinue?", "", MessageBoxButton.YesNo);
-                    if (h == MessageBoxResult.No)
-                    {
-                        Mouse.OverrideCursor = null;
-                        return;
-                    }
-                } 
+                
 
                 foreach (defualtAtts da in TagItem.Default_attributes)
                 {
@@ -351,14 +360,37 @@ namespace Part_Generator
 
         public string AddToMTMS(mTMSLibrary.Screens m, string Part_Number , string site)
         {
-            string desc = Type + ", " + Model + Size + " ";
+            string desc = Type + ", " + Size + " ";
             
             switch (Mach_Type)
             {
+                case "SQ":
+                    desc += " []" + GetAttByName("NOMSQ").Default_Value + " " + GetAttByName("SQPOS").Default_Value;
+                    break;
                 case "DD":
                     desc += "DD " + GetAttByName("DDAFLATS").Default_Value + " X" + GetAttByName("DDROUND").Default_Value;
                     break;
-                case "BODY":
+                case "B&K":
+                    desc += "X " + GetAttByName("DN").Default_Value + " K" + GetAttByName("KEYWIDTH").Default_Value + " " ;
+                    if (GetAttByName("KEYPOS1").Default_Value!= "N")
+                    {
+                        desc += GetAttByName("KEYPOS1").Default_Value;
+                    }
+                    if (GetAttByName("KEYPOS2").Default_Value != "N")
+                    {
+                        desc += GetAttByName("KEYPOS2").Default_Value;
+                    }
+                    if (GetAttByName("KEYPOS3").Default_Value != "N")
+                    {
+                        desc += GetAttByName("KEYPOS3").Default_Value;
+                    }
+                    if (GetAttByName("KEYPOS4").Default_Value != "N")
+                    {
+                        desc += GetAttByName("KEYPOS4").Default_Value;
+                    }
+                    desc += " (" + GetAttByName("KEYDEPTH").Default_Value + ")";
+                    break;
+                case "BCD":
                     desc +=  GetAttByName("BPPCD").Default_Value + " " + GetAttByName("BPNUMH").Default_Value + GetAttByName("BPHOLE").Default_Value + " " + GetAttByName("BPCENTRE").Default_Value;
                     break;
                 default:
